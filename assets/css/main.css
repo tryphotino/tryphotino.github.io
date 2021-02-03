@@ -315,7 +315,7 @@ img.rounded {
 
 /* Terminal */
 .terminal {
-    overflow: scroll;
+    overflow: auto;
     display: block;
     background: #2B2E3B;
     margin: 2em 0;

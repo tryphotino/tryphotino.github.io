@@ -202,7 +202,7 @@ img.rounded {
         left: -25%;
     }
     .photino::after {
-        border-color: rgba(30, 80, 120, 0.5);
+        border-color: #7293ad;
         left: auto;
         right: -25%;
         border-style: dashed;
@@ -213,21 +213,11 @@ img.rounded {
     .photino-logo {
         font-size: 4em;
     }
-    
-    .photino {
-        width: 1em;
-        height: 1em;
-        margin: 0 0.25em;
-    }
         .photino::before,
         .photino::after {
             width: calc(100% - 0.25em);
             height: calc(100% - 0.25em);
-            border: 0.125em solid #1E5078;
-        }
-        .photino::after {
-            border-color: rgba(30, 80, 120, 0.5);
-            border-style: dashed;
+            border-width: 0.125em;
         }
 }
 

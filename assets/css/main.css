@@ -71,6 +71,18 @@ code {
     font-family: 'Fira Code', monospace;
 }
 
+@media (min-width: 1024px) {
+    .columns {
+        column-gap: 5ex;
+    }
+    .columns.two {
+        columns: 2;
+    }
+    .columns.three {
+        columns: 3;
+    }
+}
+
 .center {
     text-align: center;
 }

@@ -100,9 +100,11 @@
             <section id="how-it-works">
                 <div class="center">
                     <h2>How does Photino work?</h2>
-                    <p>Photino is a collection of packages that can be used for different platforms and technologies. The different packages use Photino.Native as their base package. Photino.Native is a C++ (and Objective-C) wrapper around the OS’s built-in WebKit-based browser control in it. On Windows it uses the Chromium Edge based WebView2 control, on macOS it uses Safari’s WKWebView and on Linux it uses WebKitGTK+ 2. The Photino.Native package is compiled for each platform and distributed via NuGet.</p>
-                    <p>Using the native browser control reduces the overall footprint of a Photino application since there is no need to bundle WebKit in the application. Photino is cross-platform because the application communicates with the wrapper in exactly the same way on any OS. This means developers only need one code base for all desktop platforms.</p>
-                    <p>While we’re concentrating on using Photino with .NET Core 5, it could be used to build Web UIs for desktop applications written in any language, like C++, Go, Rust, Java, Objective-C and others!</p>
+                    <div class="columns three">
+                        <p>Photino is a collection of packages that can be used for different platforms and technologies. The different packages use Photino.Native as their base package. Photino.Native is a C++ (and Objective-C) wrapper around the OS’s built-in WebKit-based browser control in it. On Windows it uses the Chromium Edge based WebView2 control, on macOS it uses Safari’s WKWebView and on Linux it uses WebKitGTK+ 2. The Photino.Native package is compiled for each platform and distributed via NuGet.</p>
+                        <p>Using the native browser control reduces the overall footprint of a Photino application since there is no need to bundle WebKit in the application. Photino is cross-platform because the application communicates with the wrapper in exactly the same way on any OS. This means developers only need one code base for all desktop platforms.</p>
+                        <p>While we’re concentrating on using Photino with .NET Core 5, it could be used to build Web UIs for desktop applications written in any language, like C++, Go, Rust, Java, Objective-C and others!</p>
+                    </div>
                 </div>
             </section>
 
@@ -156,7 +158,6 @@
                 <div class="center">
                     <h2>What’s next?</h2>
                     <p>We are committed to improve Photino and develop it into a fully-fledged framework.<br>Some of the items on our list are:</p>
-                    .grid>
                     <ul>
                         <li>Native menus</li>
                         <li>Application icons</li>

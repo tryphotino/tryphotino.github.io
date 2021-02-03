@@ -206,30 +206,39 @@ img.rounded {
     }
 
 /* Cross Platform Chrome */
-.cross-platform-chrome {
-    height: 40vh;
-    position: relative;
+
+.cross-platform-chrome img.left,
+.cross-platform-chrome img.right {
+    display: none;
 }
-    .cross-platform-chrome img {
-        height: 100%;
-        margin: 0 auto;
-    }
-    .cross-platform-chrome img.top {
+
+@media (min-width: 1024px) {
+    .cross-platform-chrome {
+        height: 40vh;
         position: relative;
-        z-index: 10;
     }
-    .cross-platform-chrome img.left,
-    .cross-platform-chrome img.right {
-        height: 80%;
-        position: absolute;
-        top: 15%;
-        left: 0;
-        z-index: 0;
-    }
-    .cross-platform-chrome img.right {
-        left: auto;
-        right: 0%;
-    }
+        .cross-platform-chrome img {
+            height: 100%;
+            margin: 0 auto;
+        }
+        .cross-platform-chrome img.top {
+            position: relative;
+            z-index: 10;
+        }
+        .cross-platform-chrome img.left,
+        .cross-platform-chrome img.right {
+            display: block;
+            height: 80%;
+            position: absolute;
+            top: 15%;
+            left: 0;
+            z-index: 0;
+        }
+        .cross-platform-chrome img.right {
+            left: auto;
+            right: 0%;
+        }
+}
 
 /* Grid */
 .grid {

@@ -164,6 +164,29 @@ img.rounded {
     }
 }
 
+/* Alerts */
+.alert {
+    display: block;
+    background: #f6f6f6;
+    padding: 0.5em 0;
+    border-bottom: 1px solid #e1e1e1;
+}
+    .alert.warning {
+        background: #ffbb63;
+        border-bottom: 1px solid #bd935d;
+    }
+    .alert > p {
+        width: 90vw;
+        margin: 0 auto;
+    }
+
+@media (min-width: 768px) {
+    .alert > p {
+        width: 66vw;
+        max-width: 1024px;
+    }
+}
+
 /* Photino logo */
 @keyframes spin {
     from {

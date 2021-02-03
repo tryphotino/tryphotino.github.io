@@ -399,3 +399,16 @@ img.rounded {
 #photino-vs-electron .grid:last-of-type {
     margin-bottom: 3em;
 }
+
+/* What's next */
+#whats-next .columns {
+    text-align: center;
+}
+
+@media (min-width: 1024px) {
+    #whats-next .columns {
+        text-align: left;
+        max-width: 50%;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Photino - Native, cross-platform desktop apps with Web UI</title>
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Noto+Sans+KR:wght@300;500;700&display=swap"> 
+    </head>
+    <body>
+        <div id="app">
+            <!-- Intro -->
+            <section id="intro">
+                <div class="hero">
+                    <h1 class="hero-title center">
+                        Build native, cross-platform desktop apps<br>
+                        that are lighter than light.
+                    </h1>
+                    <p class="hero-subtitle center">
+                        Photino is a lightweight open-source framework for building native,<br>
+                        cross-platform desktop applications with Web UI technology.
+                    </p>
+                    <div class="center">
+                        <a href="#get-started" class="button primary" style="width: 175px">Get Started</a>
+                        <a href="#" class="button" style="width: 175px">Documentation</a>
+                    </div>
+                </div>
+                <img src="assets/images/photino-hello-world-windows.png"
+                     alt="Photino Hello world screen for Windows 10"
+                     class="flexible shadow">
+            </section>
+    
+            <!-- Hightlights -->
+            <section id="highlights" class="bg-transparent">
+                <div class="grid">
+                    <div class="grid-item center">
+                        <h3>Native Applications</h3>
+                        <p>Photino enables developers to use fast, natively compiled languages like C#, C++, Java and more.</p>
+                        <p>Use your favorite development frameworks like .NET Core 5.</p>
+                    </div>
+                    <div class="grid-item center">
+                        <h3>Cross-Platform UI</h3>
+                        <p>Build desktop apps with Web UI frameworks, like Blazor, React, Angular, Vue, etc.!</p>
+                        <p>Photino uses the OS’s built-in WebKit-based browser control for Windows, macOS and Linux.</p>
+                    </div>
+                    <div class="grid-item center">
+                        <h3>Lightweight</h3>
+                        <p>Photino is the lightest cross-platform framework. Compared to Electron, a Photino app is up to 110 times smaller!</p>
+                        <p>And it uses far less system memory too!</p>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Get Started -->
+            <section id="get-started" class="bg-grey">
+                <div>
+                    <h2 class="center">Get started</h2>
+                    <p class="center">Download and try the Quick Start app to get started building apps with Photino. Select your OS below and follow the installation instructions. We added helpful comments to guide you from there.</p>
+                    <code class="terminal">
+                        <div>
+                            <strong># Clone the Quick Start application repository</strong><br>
+                            $ git clone https://github.com/tryphotino/photino-quick-start
+                        </div>
+                        <div>
+                            <strong># Move into the Quick Start directory</strong><br>
+                            $ cd photino-quick-start
+                        </div>
+                        <div>
+                            <strong># Build the application</strong><br>
+                            $ dotnet build
+                        </div>
+                    </code>
+                    <p class="h3 center">You want to learn more? Read the <a href="#">documentation</a>.</p>
+                </div>
+            </section>
+
+            <!-- About Photino -->
+            <section id="about-photino">
+                <div class="center">
+                    <h2>About Photino</h2>
+                    <p>Photino is an open-source project based on Steve Sanderson’s WebWindow, which was based on .NET Core 3.1 and a pre-release version of WebView2. The goal of Photino is to enable developers to use Web UI (HTML, JavaScript, CSS, etc.) in native applications across platforms instead of learning platform-specific UI technologies.</p>
+                    <p>What is a Photino, you ask? It’s a hypothetical subatomic particle and fermion superpartner of the photon as predicted by supersymmetry. It’s a candidate for the lightest supersymmetric particle in the universe.</p>
+                </div>
+            </section>
+
+            <!-- How does Photino work? -->
+            <section id="how-it-works">
+                <div class="center">
+                    <h2>How does Photino work?</h2>
+                    <p>Photino is a collection of packages that can be used for different platforms and technologies. The different packages use Photino.Native as their base package. Photino.Native is a C++ (and Objective-C) wrapper around the OS’s built-in WebKit-based browser control in it. On Windows it uses the Chromium Edge based WebView2 control, on macOS it uses Safari’s WKWebView and on Linux it uses WebKitGTK+ 2. The Photino.Native package is compiled for each platform and distributed via NuGet.</p>
+                    <p>Using the native browser control reduces the overall footprint of a Photino application since there is no need to bundle WebKit in the application. Photino is cross-platform because the application communicates with the wrapper in exactly the same way on any OS. This means developers only need one code base for all desktop platforms.</p>
+                    <p>While we’re concentrating on using Photino with .NET Core 5, it could be used to build Web UIs for desktop applications written in any language, like C++, Go, Rust, Java, Objective-C and others!</p>
+                </div>
+            </section>
+
+            <!-- Photino for .NET -->
+            <section id="photino-dotnet" class="bg-blue">
+                <div class="center">
+                    <h2>Photino for .NET Core 5 and Blazor</h2>
+                    <p>Photino.NET adds support for .NET Core 5 to the Photino.Native package. With Photino.NET you can build desktop applications with .NET Core 5 backends and your Web Framework of choice. Since .NET Core 5 is cross-platform it is the perfect candidate for robust and reusable code that runs everywhere.</p>
+                    <p>Photino.Blazor builds on top of Photino.NET and adds the ability to build your application without having to know JavaScript or TypeScript at all.</p>
+                </div>
+            </section>
+
+            <!-- Photino vs. Electron -->
+            <section id="photino-vs-electron">
+                <div>
+                    <h2 class="center">Photino vs. Electron</h2>
+                    <div class="grid margin-lg">
+                        <div class="grid-item align-center">
+                            <h3>Download size comparison</h3>
+                            <ul>
+                                <li>Photino does not require NodeJS for backend work.</li>
+                                <li>Photino is smaller and more lightweight. It does not require a bundled install of the Chromium engine or NodeJS runtime.</li>
+                                <li>If .NET Core 5 is already available on the OS the size difference is huge, up to 110 times smaller!</li>
+                            </ul>
+                        </div>
+                        <div class="grid-item">
+                            <img src="assets/images/download-size.png"
+                                 alt="Download Size Comparison"
+                                 class="stretch rounded">
+                        </div>
+                    </div>
+                    <div class="grid margin-lg">
+                        <div class="grid-item">
+                            <img src="assets/images/memory-use.png"
+                                 alt="Memory Use Comparison"
+                                 class="stretch rounded">
+                        </div>
+                        <div class="grid-item align-center">
+                            <h3>Memory Usage Comparison</h3>
+                            <ul>
+                                <li>Photino uses far less memory than Electron.</li>
+                                <li>Especially on macOS and Linux where the native browser control uses far less memory than Chromium.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="center">While Photino brings a lot of advantages over Electron, it is still in its early development and not as feature rich as Electron. But we’re inviting the open-source community to help improve Photino! You’re welcome to join and add missing functionality that you need, fix bugs and submit pull request.</p>
+                </div>
+            </section>
+
+            <section id="whats-next" class="bg-grey">
+                <div class="center">
+                    <h2>What’s next?</h2>
+                    <p>We are committed to improve Photino and develop it into a fully-fledged framework.<br>Some of the items on our list are:</p>
+                    <ul>
+                        <li>Support for native menus and application icons</li>
+                        <li>In-app updates</li>
+                        <li>More documentation</li>
+                        <li>Built-in crash reporting</li>
+                        <li>Support for .NET Core 6</li>
+                        <li>Support for mobile platforms (iOS, Android)</li>
+                    </ul>
+
+                </div>
+            </section>
+
+            <section id="behind-photino">
+                <div class="center">
+                    <h2>Who is behind Photino?</h2>
+                    <p>
+                        Photino is maintained by <a href="https://codemag.com/">CODE Magazine</a> with the help of the open-source community. Join the Photino community on GitHub at <a href="https://github.com/tryphotino">github.com/tryphotino</a>.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>

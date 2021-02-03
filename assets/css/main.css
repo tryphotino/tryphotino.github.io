@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    color: #111;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+/* Typography */
+h1, h2, h3, h4,
+.h1, .h2, .h3, .h4 {
+    margin: 0.67em 0;
+    padding: 0;
+
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1.1em;
+}
+
+h1, .h1 {
+    color: #1E5078;
+    font-size: 1.8em;
+}
+
+h2, .h2 {
+    font-size: 1.6em;
+}
+
+h3, .h3 {
+    font-size: 1.2em;
+}
+
+p {
+    margin: 0 0 1em;
+    padding: 0;
+    line-height: 1.5em;
+}
+
+a {
+    display: inline-block;
+    margin: 0 -0.35ex;
+    padding: 0 0.35ex;
+    color: #1E5078;
+    font-weight: bold;
+}
+    a:hover {
+        background: #97b3db;
+        margin: -0.1em -0.25ex -0.15em;
+        padding: 0.1em 0.25ex 0.15em;
+        text-decoration: none;
+        border-radius: 2px;
+    }
+
+ul {
+    padding: 0 0 0 1.5em;
+    margin: 0;
+    list-style: disc outside;
+}
+    ul > li {
+        margin: 0.5em 0;
+        padding: 0 0 0 0.25em;
+    }
+
+code {
+    font-family: 'Fira Code', monospace;
+}
+
+.center {
+    text-align: center;
+}
+
+/* Buttons */
+button,
+.button,
+a.button {
+    display: block;
+    background: #f6f6f6;
+    margin: 1em auto;
+    padding: 0.9em 1em 1em;
+    color: #1E5078;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1em;
+    border-radius: 3px;
+    border: 1px solid #e1e1e1;
+}
+button,
+.button:hover,
+a.button:hover {
+    background: #f0f0f0;
+}
+    button.primary,
+    .button.primary,
+    a.button.primary {
+        background: #1E5078;
+        color: #e1f3f8;
+        border-color: #113d61;
+    }
+    button.primary:hover,
+    .button.primary:hover,
+    a.button.primary:hover {
+        background: #3f698b;
+    }
+
+@media (min-width: 768px) {
+    button,
+    .button,
+    a.button {
+        display: inline-block;
+        margin: 0 1em;
+    }
+}
+
+/* Images */
+img.flexible {
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+img.stretch {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+img.shadow {
+    box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+}
+
+img.rounded {
+    border-radius: 3px;
+}
+
+@media (min-width: 768px) {
+    img.flexible {
+        max-width: 100%;
+    }
+
+    img.stretch {
+        width: 100%;
+    }
+}
+
+/* Hero */
+.hero {
+    padding: 4em 0 3em;
+}
+    .hero > .hero-title {
+        margin: 0 0 0.3em;
+        font-size: 2em;
+        line-height: 1.5em;
+    }
+    .hero > .hero-subtitle {
+        margin: 0 0 1em;
+        font-size: 1.2em;
+        line-height: 1.5em;
+    }
+
+/* Grid */
+.grid {
+    display: flex;
+    flex-direction: column;
+}
+    .grid > .grid-item {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        margin: 1em 0;
+    }
+    .grid > .grid-item.align-center {
+        justify-content: center;
+    }
+
+@media (min-width: 768px) {
+    .grid {
+        flex-direction: row;
+    }
+        .grid > .grid-item {
+            margin: 0 1em;
+        }
+        .grid > .grid-item.align-center {
+            justify-content: center;
+        }
+        .grid.margin-lg > .grid-item {
+            margin: 0 2em;
+        }
+}
+
+/* Terminal */
+.terminal {
+    display: block;
+    background: #2B2E3B;
+    margin: 2em 0;
+    padding: 0.25em 1em;
+    color: #97DDEC;
+    border-radius: 3px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+}
+    .terminal > div {
+        margin: 1em 0;
+    }
+
+#app {
+    display: flex;
+    flex-direction: column;
+}
+
+#app section {
+    flex: 0 0 100%;
+    padding: 2em 0 3em;
+}
+    #app section > div {
+        width: 66vw;
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+        #app section > div p {
+            max-width: 100ex;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    #app section.bg-grey {
+        background: #f6f6f6;
+        border-top: 1px solid #e1e1e1;
+        border-bottom: 1px solid #e1e1e1;
+    }
+    #app section.bg-blue {
+        background: #e7f1ff;
+        border-top: 1px solid #c5d4f0;
+        border-bottom: 1px solid #c5d4f0;
+    }
+    #app section:not([class*="bg-"]) + section:not([class*="bg-"]),
+    #app section.bg-grey + section.bg-grey,
+    #app section.bg-blue + section.bg-blue {
+        margin-top: -2em;
+        padding-top: 0;
+    }
+    #app section[class*="bg-"]:not(.bg-transparent) + section[class*="bg-"] {
+        border-top: none;
+    }
+
+/* Intro */
+
+/* Hightlights */
+
+/* Get Started */
+
+/* About Photino */
+
+/* How does Photino work? */
+
+/* Photino for .NET */
+
+/* Photino vs. Electron */
+#photino-vs-electron .grid {
+    margin-top: 3em;
+}
+
+#photino-vs-electron .grid:last-of-type {
+    margin-bottom: 3em;
+}

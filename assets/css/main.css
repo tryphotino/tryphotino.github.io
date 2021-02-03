@@ -164,12 +164,7 @@ img.rounded {
     }
 }
 
-.logo {
-    color: #1E5078;
-    font-size: 4em;
-    line-height: 1em;
-}
-
+/* Photino logo */
 @keyframes spin {
     from {
         transform: rotate(0deg);
@@ -178,6 +173,14 @@ img.rounded {
         transform: rotate(360deg);
     }
 }
+
+.photino-logo {
+    color: #1E5078;
+    font-size: 3em;
+    line-height: 1em;
+    white-space: nowrap;
+}
+
 .photino {
     display: inline-block;
     overflow: visible;
@@ -190,9 +193,9 @@ img.rounded {
     .photino::after {
         display: block;
         content: "";
-        width: calc(100% - 0.25em);
-        height: calc(100% - 0.25em);
-        border: 0.125em solid #1E5078;
+        width: calc(100% - 0.15em);
+        height: calc(100% - 0.15em);
+        border: 0.095em solid #1E5078;
         border-radius: 50%;
         position: absolute;
         top: 0.1em;
@@ -205,6 +208,28 @@ img.rounded {
         border-style: dashed;
         animation: spin 30s linear infinite;
     }
+
+@media (min-width: 768px) {
+    .photino-logo {
+        font-size: 4em;
+    }
+    
+    .photino {
+        width: 1em;
+        height: 1em;
+        margin: 0 0.25em;
+    }
+        .photino::before,
+        .photino::after {
+            width: calc(100% - 0.25em);
+            height: calc(100% - 0.25em);
+            border: 0.125em solid #1E5078;
+        }
+        .photino::after {
+            border-color: rgba(30, 80, 120, 0.5);
+            border-style: dashed;
+        }
+}
 
 /* Hero */
 .hero {
@@ -290,6 +315,7 @@ img.rounded {
 
 /* Terminal */
 .terminal {
+    overflow: scroll;
     display: block;
     background: #2B2E3B;
     margin: 2em 0;
@@ -300,6 +326,7 @@ img.rounded {
 }
     .terminal > div {
         margin: 1em 0;
+        white-space: nowrap;
     }
 
 #app {

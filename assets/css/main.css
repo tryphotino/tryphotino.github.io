@@ -231,6 +231,8 @@ img.rounded {
 @media (min-width: 1024px) {
     .cross-platform-chrome {
         height: 40vh;
+        min-height: 400px;
+        max-height: 550px;
         position: relative;
     }
         .cross-platform-chrome img {
@@ -310,8 +312,7 @@ img.rounded {
     padding: 2em 0 3em;
 }
     #app section > div {
-        width: 66vw;
-        max-width: 1024px;
+        width: 90vw;
         margin: 0 auto;
     }
         #app section > div p {
@@ -339,6 +340,13 @@ img.rounded {
     #app section[class*="bg-"]:not(.bg-transparent) + section[class*="bg-"] {
         border-top: none;
     }
+
+@media (min-width: 768px) {
+    #app section > div {
+        width: 66vw;
+        max-width: 1024px;
+    }
+}
 
 /* Intro */
 

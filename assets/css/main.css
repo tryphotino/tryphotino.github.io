@@ -130,6 +130,10 @@ a.button:hover {
 }
 
 /* Images */
+img.inline {
+    display: inline-block;
+}
+
 img.flexible {
     display: block;
     max-width: 90%;
@@ -347,6 +351,10 @@ img.rounded {
 /* How does Photino work? */
 
 /* Photino for .NET */
+#photino-dotnet img {
+    height: 100px;
+    margin: 1em 1em 0;
+}
 
 /* Photino vs. Electron */
 #photino-vs-electron .grid {

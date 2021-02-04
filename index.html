@@ -140,16 +140,53 @@
                             </ul>
                         </div>
                         <div class="grid-item">
-                            <img src="assets/images/download-size.png"
-                                 alt="Download Size Comparison"
-                                 class="stretch rounded">
+                            <div id="download-size-graph" class="graph-wrapper">
+                                <div class="title">Download size (blank app, compressed)</div>
+                                <div class="graph">
+                                    <div class="group" data-min="0" data-max="100" data-unit="MB">
+                                        <div class="strong">Windows</div>
+                                        <div class="bar" data-label="Electron 11.2.1" data-value="60"></div>
+                                        <div class="bar blue" data-label="Photino + Blazor (.NET bundled)" data-value="30"></div>
+                                        <div class="bar blue" data-label="Photino + Blazor (.NET installed)" data-value="0.8"></div>
+                                    </div>
+                                    <div class="group" data-min="0" data-max="100" data-unit="MB">
+                                        <div class="strong">macOS</div>
+                                        <div class="bar" data-label="Electron 11.2.1" data-value="64"></div>
+                                        <div class="bar blue" data-label="Photino + Blazor (.NET bundled)" data-value="31"></div>
+                                        <div class="bar blue" data-label="Photino + Blazor (.NET installed)" data-value="0.6"></div>
+                                    </div>
+                                    <div class="group" data-min="0" data-max="100" data-unit="MB">
+                                        <div class="strong">Ubuntu 18.04</div>
+                                        <div class="bar" data-label="Electron 11.2.1" data-value="66"></div>
+                                        <div class="bar blue" data-label="Photino + Blazor (.NET bundled)" data-value="32"></div>
+                                        <div class="bar blue" data-label="Photino + Blazor (.NET installed)" data-value="0.6"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="grid margin-lg">
                         <div class="grid-item">
-                            <img src="assets/images/memory-use.png"
-                                 alt="Memory Use Comparison"
-                                 class="stretch rounded">
+                            <div id="memory-use-graph" class="graph-wrapper">
+                                <div class="title">Memory use</div>
+                                <div class="graph">
+                                    <div class="group" data-min="0" data-max="200" data-unit="MB">
+                                        <div class="strong">Windows</div>
+                                        <div class="bar" data-label="Electron 11.2.1" data-value="134"></div>
+                                        <div class="bar blue" data-label="Photino + Blazor" data-value="86"></div>
+                                    </div>
+                                    <div class="group" data-min="0" data-max="200" data-unit="MB">
+                                        <div class="strong">macOS</div>
+                                        <div class="bar" data-label="Electron 11.2.1" data-value="96"></div>
+                                        <div class="bar blue" data-label="Photino + Blazor" data-value="41"></div>
+                                    </div>
+                                    <div class="group" data-min="0" data-max="200" data-unit="MB">
+                                        <div class="strong">Ubuntu 18.04</div>
+                                        <div class="bar" data-label="Electron 11.2.1" data-value="94"></div>
+                                        <div class="bar blue" data-label="Photino + Blazor" data-value="20"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="grid-item align-center">
                             <h3>Memory Usage Comparison</h3>
@@ -191,5 +228,42 @@
                 </div>
             </section>
         </div>
+
+        <script>
+            (() => {
+                const GetAttrValue = (element, attribute) => {
+                    return element.hasAttribute(attribute)
+                        ? element.getAttribute(attribute)
+                        : null;
+                };
+
+                const graphs = document.querySelectorAll(".graph");
+                graphs.forEach(graph => {
+                    const groups = graph.querySelectorAll(".group");
+                    groups.forEach(group => {
+                        const min = GetAttrValue(group, "data-min") ?? 0;
+                        const max = GetAttrValue(group, "data-max") ?? 100;
+                        const unit = GetAttrValue(group, "data-unit") ?? "%";
+
+                        const bars = group.querySelectorAll(".bar");
+                        bars.forEach(bar => {
+                            const value = GetAttrValue(bar, "data-value");
+                            
+                            if (bar.hasAttribute("data-unit") === false) {
+                                bar.setAttribute("data-unit", unit);
+                            }
+
+                            if (value === null) {
+                                bar.classList.add("error");
+                                bar.style.width = "100%";
+                            }
+                            
+                            const percentage = parseFloat(value) / max * 100;
+                            bar.style.maxWidth = `${percentage}%`;
+                        });
+                    })
+                });
+            })();
+        </script>
     </body>
 </html>

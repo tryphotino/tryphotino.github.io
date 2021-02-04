@@ -16,7 +16,6 @@ h1, h2, h3, h4,
 .h1, .h2, .h3, .h4 {
     margin: 0.67em 0;
     padding: 0;
-
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 1em;
     font-weight: bold;
@@ -85,6 +84,10 @@ code {
 
 .center {
     text-align: center;
+}
+
+strong, .strong {
+    font-weight: bold;
 }
 
 /* Buttons */
@@ -342,6 +345,122 @@ img.rounded {
         white-space: nowrap;
     }
 
+/* Bar Graphs */
+@keyframes bar-grow {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.graph-wrapper {
+    background: #f6f6f6;
+    padding: 1.5em 2em 2em;
+    border-radius: 3px;
+}
+.graph-wrapper .title {
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+}
+
+.graph {
+    width: 100%;
+    min-width: 300px;
+    position: relative;
+}
+
+    .graph .group {
+        border-bottom: 1px dashed #ccc;
+        margin: 0 0 1em;
+        padding: 1em 0 0;
+        position: relative;
+    }
+    .graph .group *:first-child:not(.bar) {
+        display: block;
+        width: 100%;
+    }
+
+        .graph .group::before,
+        .graph .group::after {
+            display: block;
+            height: 1em;
+            color: #999;
+            font-size: 0.65em;
+            content: attr(data-min) " " attr(data-unit);
+            position: absolute;
+            bottom: -1.5em;
+            left: 0;
+        }
+        .graph .group::after {
+            content: attr(data-max) " " attr(data-unit);
+            left: auto;
+            right: 0;
+        }
+
+    .graph .bar {
+        overflow: visible;
+        display: block;
+        background: #e1e1e1;
+        height: 1.5em;
+        margin: 2em 0 0.5em 0;
+        line-height: 1.3em;
+        border-radius: 0 3px 3px 0;
+        position: relative;
+        animation: bar-grow 1s linear;
+    }
+        .graph .bar::before {
+            display: block;
+            content: attr(data-label);
+            font-size: 0.8em;
+            white-space: nowrap;
+            position: absolute;
+            top: -2em;
+        }
+        .graph .bar::after {
+            display: inline-block;
+            content: attr(data-value) " " attr(data-unit);
+            width: 100%;
+            margin-left: calc(100% + 0.5em);
+            white-space: nowrap;
+        }
+
+        .graph .bar.blue {
+            background: #1E5078;
+        }
+        .graph .bar.error {
+            background: red;
+        }
+        .graph .bar.error::after {
+            content: "No value available";
+            text-align: left;
+            margin: 0 0 0 1em;
+        }
+
+@media (min-width: 1024px) {
+.graph {
+    min-width: 500px;
+}
+    .graph .group + .group {
+        padding-top: 0em;
+    }
+    .graph .group *:first-child:not(.bar) {
+        text-align: right;
+        margin-left: calc(-100% - 0.8em);
+    }
+        .graph .bar {
+            margin-top: 0.5em;
+        }
+            .graph .bar::before {
+                display: inline-block;
+                text-align: right;
+                right: calc(100% + 1em);
+                top: auto;
+            }
+}
+
 #app {
     display: flex;
     flex-direction: column;
@@ -411,6 +530,16 @@ img.rounded {
 
 #photino-vs-electron .grid:last-of-type {
     margin-bottom: 3em;
+}
+
+@media (min-width: 1024px) {
+    #download-size-graph .graph {
+        padding-left: 200px;
+    }
+
+    #memory-use-graph .graph {
+        padding-left: 150px;
+    }
 }
 
 /* What's next */

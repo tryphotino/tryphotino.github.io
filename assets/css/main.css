@@ -543,14 +543,16 @@ img.rounded {
 }
 
 /* What's next */
-#whats-next .columns {
+#whats-next .grid-item {
     text-align: center;
 }
 
 @media (min-width: 1024px) {
-    #whats-next .columns {
-        text-align: left;
+    #whats-next .grid {
         max-width: 50%;
         margin: 0 auto;
+    }
+    #whats-next .grid-item {
+        text-align: left;
     }
 }

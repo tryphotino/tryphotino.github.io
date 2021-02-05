@@ -314,6 +314,13 @@ img.rounded {
         justify-content: center;
     }
 
+    .grid > .grid-item.grid-order-xs-1 {
+        order: 1;
+    }
+    .grid > .grid-item.grid-order-xs-2 {
+        order: 2;
+    }
+
 @media (min-width: 768px) {
     .grid {
         flex-direction: row;
@@ -326,6 +333,13 @@ img.rounded {
         }
         .grid.margin-lg > .grid-item {
             margin: 0 2em;
+        }
+        
+        .grid > .grid-item.grid-order-xs-1 {
+            order: unset;
+        }
+        .grid > .grid-item.grid-order-xs-2 {
+            order: unset;
         }
 }
 
@@ -440,7 +454,7 @@ img.rounded {
             margin: 0 0 0 1em;
         }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
     .graph .groups .group + .group {
         padding-top: 0em;
     }
@@ -522,14 +536,19 @@ img.rounded {
 }
 
 /* Photino vs. Electron */
-#photino-vs-electron .grid {
-    margin-top: 3em;
-}
-
 #photino-vs-electron .grid:last-of-type {
-    margin-bottom: 3em;
+    margin-bottom: 2em;
 }
 
+@media (min-width: 768px) {
+    #photino-vs-electron .grid {
+        margin-top: 3em;
+    }
+
+    #photino-vs-electron .grid:last-of-type {
+        margin-bottom: 3em;
+    }
+}
 
 @media (min-width: 768px) {
     #download-size-graph,
@@ -538,7 +557,7 @@ img.rounded {
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
     #download-size-graph,
     #memory-use-graph {
         min-width: 500px;

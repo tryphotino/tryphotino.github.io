@@ -76,18 +76,18 @@
                 <div>
                     <h2 class="center">Get started</h2>
                     <p class="center">Download and try the Quick Start app to get started building apps with Photino. Select your OS below and follow the installation instructions. We added helpful comments to guide you from there.</p>
-                    <code class="terminal">
+                    <code id="quickstart-terminal" class="terminal">
                         <div>
                             <strong># Clone the Quick Start application repository</strong><br>
-                            $ git clone https://github.com/tryphotino/photino-quick-start
+                            $ git clone https://github.com/tryphotino/photino-quickstart
                         </div>
                         <div>
                             <strong># Move into the Quick Start directory</strong><br>
-                            $ cd photino-quick-start
+                            $ cd photino-quickstart
                         </div>
                         <div>
-                            <strong># Build the application</strong><br>
-                            $ dotnet build
+                            <strong># Run the application</strong><br>
+                            $ dotnet run
                         </div>
                     </code>
                     <p class="h3 center">You want to learn more? Read the <a href="#">documentation</a>.</p>
@@ -140,9 +140,9 @@
                             </ul>
                         </div>
                         <div class="grid-item">
-                            <div id="download-size-graph" class="graph-wrapper">
+                            <div id="download-size-graph" class="graph">
                                 <div class="title">Download size (blank app, compressed)</div>
-                                <div class="graph">
+                                <div class="groups">
                                     <div class="group" data-min="0" data-max="100" data-unit="MB">
                                         <div class="strong">Windows</div>
                                         <div class="bar" data-label="Electron 11.2.1" data-value="60"></div>
@@ -167,9 +167,9 @@
                     </div>
                     <div class="grid margin-lg">
                         <div class="grid-item">
-                            <div id="memory-use-graph" class="graph-wrapper">
+                            <div id="memory-use-graph" class="graph">
                                 <div class="title">Memory use</div>
-                                <div class="graph">
+                                <div class="groups">
                                     <div class="group" data-min="0" data-max="200" data-unit="MB">
                                         <div class="strong">Windows</div>
                                         <div class="bar" data-label="Electron 11.2.1" data-value="134"></div>
@@ -245,7 +245,7 @@
 
                 const graphs = document.querySelectorAll(".graph");
                 graphs.forEach(graph => {
-                    const groups = graph.querySelectorAll(".group");
+                    const groups = graph.querySelectorAll(".groups .group");
                     groups.forEach(group => {
                         const min = GetAttrValue(group, "data-min") ?? 0;
                         const max = GetAttrValue(group, "data-max") ?? 100;

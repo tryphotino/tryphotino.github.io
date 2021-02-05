@@ -356,7 +356,9 @@ img.rounded {
 }
 
 .graph-wrapper {
+    overflow: hidden;
     background: #f6f6f6;
+    max-width: 100%;
     padding: 1.5em 2em 2em;
     border-radius: 3px;
 }
@@ -368,7 +370,6 @@ img.rounded {
 
 .graph {
     width: 100%;
-    min-width: 300px;
     position: relative;
 }
 
@@ -438,6 +439,12 @@ img.rounded {
             text-align: left;
             margin: 0 0 0 1em;
         }
+
+@media (min-width: 768px) {
+    .graph {
+        min-width: 300px;
+    }
+}
 
 @media (min-width: 1024px) {
 .graph {

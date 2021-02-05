@@ -191,7 +191,7 @@ img.rounded {
 }
 
 /* Photino logo */
-@keyframes spin {
+@keyframes photino-logo-spin {
     from {
         transform: rotate(0deg);
     }
@@ -232,7 +232,7 @@ img.rounded {
         left: auto;
         right: -25%;
         border-style: dashed;
-        animation: spin 30s linear infinite;
+        animation: photino-logo-spin 30s linear infinite;
     }
 
 @media (min-width: 768px) {

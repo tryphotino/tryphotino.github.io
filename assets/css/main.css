@@ -191,60 +191,11 @@ img.rounded {
 }
 
 /* Photino logo */
-@keyframes photino-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
 .photino-logo {
-    color: #1E5078;
-    font-size: 3em;
-    line-height: 1em;
-    white-space: nowrap;
-}
-
-.photino {
-    display: inline-block;
-    overflow: visible;
-    width: 1em;
-    height: 1em;
-    margin: 0 0.25em;
-    position: relative;
-}
-    .photino::before,
-    .photino::after {
-        display: block;
-        content: "";
-        width: calc(100% - 0.15em);
-        height: calc(100% - 0.15em);
-        border: 0.095em solid #1E5078;
-        border-radius: 50%;
-        position: absolute;
-        top: 0.1em;
-        left: -25%;
-    }
-    .photino::after {
-        border-color: #7293ad;
-        left: auto;
-        right: -25%;
-        border-style: dashed;
-        animation: photino-logo-spin 30s linear infinite;
-    }
-
-@media (min-width: 768px) {
-    .photino-logo {
-        font-size: 4em;
-    }
-        .photino::before,
-        .photino::after {
-            width: calc(100% - 0.25em);
-            height: calc(100% - 0.25em);
-            border-width: 0.125em;
-        }
+    display: block;
+    width: 80vw;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 /* Hero */

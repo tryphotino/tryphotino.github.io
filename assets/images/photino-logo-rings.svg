@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+    id="photino-logo"
+    width="114px"
+    height="76px"
+    viewBox="0 0 114 76">
+    <svg id="photino-circles">
+        <circle cx="38" cy="38" r="33"
+            fill="transparent"
+            stroke="#1E5078"
+            stroke-width="8" />
+        
+        <circle cx="76" cy="38" r="33"
+            fill="transparent"
+            stroke="#7293ad"
+            stroke-width="8"
+            stroke-dasharray="13,13">
+            <animateTransform
+                attributeType="XML"
+                attributeName="transform"
+                type="rotate"
+                from="0 76 38"
+                to="360 76 38"
+                dur="30s"
+                repeatCount="indefinite" />
+        </circle>
+    </svg>
+</svg>

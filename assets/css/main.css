@@ -5,10 +5,21 @@
 html, body {
     margin: 0;
     padding: 0;
+}
+
+
+body {
     color: #111;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 15px;
     font-weight: normal;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #222;
+        color: #dadada;
+    }
 }
 
 /* Typography */
@@ -132,6 +143,22 @@ a.button:hover {
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    button,
+    .button,
+    a.button {
+        background: #333;
+        color: #dadada;
+        border-color: #2f2f2f;
+    }
+        button:hover,
+        .button:hover,
+        a.button:hover {
+            background: #444;
+            border-color: #333;
+        }
+}
+
 /* Images */
 img.inline {
     display: inline-block;
@@ -187,6 +214,12 @@ img.rounded {
     .alert > p {
         width: 66vw;
         max-width: 1024px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .alert {
+        color: #111;
     }
 }
 
@@ -424,6 +457,17 @@ img.rounded {
             }
 }
 
+@media (prefers-color-scheme: dark) {
+    .graph {
+        background: #555;
+        border-color: #999;
+    }
+
+    .graph .groups .group .bar {
+        background: #777;
+    }
+}
+
 #app {
     display: flex;
     flex-direction: column;
@@ -467,6 +511,17 @@ img.rounded {
     #app section > div {
         width: 66vw;
         max-width: 1024px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    #app section.bg-grey {
+        background: #555;
+        border-color: #999;
+    }
+    #app section.bg-blue {
+        background: #364457;
+        border-color: #4e607a;
     }
 }
 

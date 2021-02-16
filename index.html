@@ -239,38 +239,69 @@
 
         <script>
             (() => {
-                const GetAttrValue = (element, attribute) => {
+                // ---------------------
+                // Helpers
+                // ---------------------
+
+                /**
+                 * Gets an attribute of an element if it
+                 * exists or null if it doesn't.
+                 * 
+                 * @param {String} element The HTML element with the attribute
+                 * @param {String} attribute The attribute name you're looking for
+                 * @returns {String} The string value of the attribute 
+                 */
+                const GetAttrValue = (element, attribute) =>
+                {
                     return element.hasAttribute(attribute)
                         ? element.getAttribute(attribute)
                         : null;
                 };
 
-                const graphs = document.querySelectorAll(".graph");
-                graphs.forEach(graph => {
-                    const groups = graph.querySelectorAll(".groups .group");
-                    groups.forEach(group => {
-                        const min = GetAttrValue(group, "data-min") ?? 0;
-                        const max = GetAttrValue(group, "data-max") ?? 100;
-                        const unit = GetAttrValue(group, "data-unit") ?? "%";
+                // ---------------------
+                // Document Functions
+                // ---------------------
 
-                        const bars = group.querySelectorAll(".bar");
-                        bars.forEach(bar => {
-                            const value = GetAttrValue(bar, "data-value");
+                /**
+                 * Initialize Graphs on the page.
+                 * 
+                 * @returns {void}
+                 */
+                const InitializeGraphs = () =>
+                {
+                    const graphs = document.querySelectorAll(".graph");
+    
+                    graphs.forEach(graph => {
+                        const groups = graph.querySelectorAll(".groups .group");
+                        
+                        groups.forEach(group => {
+                            const min = GetAttrValue(group, "data-min") ?? 0;
+                            const max = GetAttrValue(group, "data-max") ?? 100;
+                            const unit = GetAttrValue(group, "data-unit") ?? "%";
+        
+                            const bars = group.querySelectorAll(".bar");
                             
-                            if (bar.hasAttribute("data-unit") === false) {
-                                bar.setAttribute("data-unit", unit);
-                            }
+                            bars.forEach(bar => {
+                                const value = GetAttrValue(bar, "data-value");
+                                
+                                if (bar.hasAttribute("data-unit") === false) {
+                                    bar.setAttribute("data-unit", unit);
+                                }
+        
+                                if (value === null) {
+                                    bar.classList.add("error");
+                                    bar.style.width = "100%";
+                                }
+                                
+                                const percentage = parseFloat(value) / max * 100;
+                                bar.style.maxWidth = `${percentage}%`;
+                            });
+                        })
+                    });
+                };
 
-                            if (value === null) {
-                                bar.classList.add("error");
-                                bar.style.width = "100%";
-                            }
-                            
-                            const percentage = parseFloat(value) / max * 100;
-                            bar.style.maxWidth = `${percentage}%`;
-                        });
-                    })
-                });
+                // Document Initialization
+                InitializeGraphs();
             })();
         </script>
     </body>

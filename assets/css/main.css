@@ -338,6 +338,7 @@ img.rounded {
     margin: 2em 0;
     padding: 0.25em 1em;
     color: #97DDEC;
+    font-family: 'Fira Code', monospace;
     border-radius: 3px;
     box-shadow: 0 0 20px rgba(0, 0, 0, .3);
 }

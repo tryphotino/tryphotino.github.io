@@ -76,20 +76,25 @@
             <!-- Get Started -->
             <section id="get-started" class="bg-grey">
                 <div>
-                    <h2 class="center">Get started</h2>
-                    <p class="center">Download and try the Quick Start app to get started building apps with Photino. Select your OS below and follow the installation instructions. We added helpful comments to guide you from there.</p>
+                    <h2 class="center">Get started with Photino.NET</h2>
+                    <p class="center">To get started, simply follow the instructions below. There are several templates available for Blazor, Vue, Angular, React and gRPC starter apps. We've added some helpful comments to the sample apps to explain everything.</p>
                     <code id="quickstart-terminal" class="terminal">
                         <div>
-                            <strong># Clone the Quick Start application repository</strong><br>
-                            $ git clone https://github.com/tryphotino/photino-quickstart
+                            <div class="comment">Install .NET templates</div>
+                            <div class="command">dotnet new -i TryPhotino.VSCode.Project.Templates<span class="command-newline"> \</span></div>
                         </div>
                         <div>
-                            <strong># Move into the Quick Start directory</strong><br>
-                            $ cd photino-quickstart
+                            <div class="comment">Create a new sample app from the template.</div>
+                            <div class="comment">See a list of available templates with <code>dotnet new -l</code>.</div>
+                            <div class="command"><span class="command-connector"> && </span> dotnet new photinoapp -o PhotinoSampleApp<span class="command-newline"> \</span></div>
                         </div>
                         <div>
-                            <strong># Run the application</strong><br>
-                            $ dotnet run
+                            <div class="comment">Change into sample app directory</div>
+                            <div class="command"><span class="command-connector"> && </span> cd PhotinoSampleApp<span class="command-newline"> \</span></div>
+                        </div>
+                        <div>
+                            <div class="comment">Run the application</div>
+                            <div class="command"><span class="command-connector"> && </span> dotnet run</div>
                         </div>
                     </code>
                     <p class="h3 center">You want to learn more? Read the <a href="#">documentation</a>.</p>

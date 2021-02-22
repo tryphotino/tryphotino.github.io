@@ -7,7 +7,6 @@ html, body {
     padding: 0;
 }
 
-
 body {
     color: #111;
     font-family: 'Noto Sans KR', sans-serif;
@@ -345,6 +344,49 @@ img.rounded {
     .terminal > div {
         margin: 1em 0;
         white-space: nowrap;
+    }
+
+    .terminal .comment {
+        font-weight: bold;
+
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: default;
+        
+    }
+        .terminal .comment::before {
+            content: "# ";
+        }
+
+    .terminal .command {
+        font-weight: normal;
+        
+    }
+        .terminal .command::before {
+            content: "$ ";
+        }
+        .terminal .command:hover {
+            background: rgba(70, 76, 102, 0.5);
+            margin: -0.15em -0.5ex -0.15em;
+            padding: 0.15em 0.5ex 0.15em;
+            border-radius: 2px;
+        }
+
+    .terminal .command-connector,
+    .terminal .command-newline {
+        font-size: 0;
+    }
+    .terminal .command-newline {
+        display: inline-block;
+        margin-left: 2em;
+    }
+    
+    .terminal code {
+        background: rgba(70, 76, 102, 0.8);
     }
 
 /* Bar Graphs */

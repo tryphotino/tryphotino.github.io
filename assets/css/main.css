@@ -16,7 +16,7 @@ body {
 
 @media (prefers-color-scheme: dark) {
     body {
-        background: #222;
+        background: #1a1c24;
         color: #dadada;
     }
 }
@@ -65,6 +65,15 @@ a {
         text-decoration: none;
         border-radius: 2px;
     }
+
+@media (prefers-color-scheme: dark) {
+    a {
+        color: #63929c;
+    }
+        a:hover {
+            background: rgba(120, 120, 120, 0.5);
+        }
+}
 
 ul {
     padding: 0 0 0 1.5em;
@@ -224,6 +233,9 @@ img.rounded {
     .alert {
         color: #111;
     }
+        .alert.warning {
+            background: #c48532;
+        }
 }
 
 /* Photino logo */
@@ -284,6 +296,12 @@ img.rounded {
             left: auto;
             right: 0%;
         }
+}
+
+@media (prefers-color-scheme: dark) {
+    .cross-platform-chrome {
+        filter: brightness(75%);
+    }
 }
 
 /* Grid */
@@ -506,7 +524,7 @@ img.rounded {
 
 @media (prefers-color-scheme: dark) {
     .graph {
-        background: #555;
+        background: #333;
         border-color: #999;
     }
 
@@ -563,12 +581,12 @@ img.rounded {
 
 @media (prefers-color-scheme: dark) {
     #app section.bg-grey {
-        background: #555;
-        border-color: #999;
+        background: #333333;
+        border-color: #3f3f3f;
     }
     #app section.bg-blue {
-        background: #364457;
-        border-color: #4e607a;
+        background: #293544;
+        border-color: #3b485a;
     }
 }
 

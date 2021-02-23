@@ -359,6 +359,7 @@ img.rounded {
     font-family: 'Fira Code', monospace;
     border-radius: 3px;
     box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+    position: relative;
 }
     .terminal > div {
         margin: 1em 0;
@@ -407,6 +408,40 @@ img.rounded {
     .terminal code {
         background: rgba(70, 76, 102, 0.8);
     }
+
+    .terminal button.copy {
+        display: none;
+    }
+
+@media (min-width: 768px) {
+    .terminal button.copy {
+        display: block;
+        background: rgba(70, 76, 102, 0.65);
+        color: #fff;
+        font-size: 0.9em;
+        border: none;
+        position: absolute;
+        right: 0;
+        bottom: 1em;
+        cursor: pointer;
+    }
+    .terminal button:hover {
+        background: rgba(70, 76, 102, 1);
+    }
+        .terminal button.copied {
+            background: #72b972;
+        }
+            .terminal button.copied::before {
+                content: "Copied to clipboard!";
+                color: #fff;
+                margin: 0 1ex 0 0;
+            }
+        
+        .terminal button.error {
+            background: #d45353;
+        }
+}
+
 
 /* Bar Graphs */
 @keyframes bar-grow {

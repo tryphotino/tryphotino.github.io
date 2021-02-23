@@ -11,6 +11,8 @@
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
+        <script src="https://kit.fontawesome.com/37017d0b3a.js" crossorigin="anonymous"></script>
+        <script src="assets/js/main.js"></script>
     </head>
     <body>
         <div id="app">
@@ -34,7 +36,7 @@
                     </p>
                     <div class="center">
                         <a href="#get-started" class="button primary" style="width: 175px">Get Started</a>
-                        <a href="https://docs.tryphotino.io" class="button" style="width: 175px">Documentation</a>
+                        <a href="//docs.tryphotino.io" class="button" style="width: 175px">Documentation</a>
                     </div>
                 </div>
                 <div class="cross-platform-chrome">
@@ -84,7 +86,7 @@
                             <div class="command">dotnet new -i TryPhotino.VSCode.Project.Templates<span class="command-newline"> \</span></div>
                         </div>
                         <div>
-                            <div class="comment">Create a new sample app from the template</div>
+                            <div class="comment">Create a new sample app from the Photino.HelloPhotino.NET template</div>
                             <div class="comment">See a list of available templates with <code>dotnet new -l</code></div>
                             <div class="command"><span class="command-connector"> && </span> dotnet new photinoapp -o PhotinoSampleApp<span class="command-newline"> \</span></div>
                         </div>
@@ -96,8 +98,9 @@
                             <div class="comment">Run the application</div>
                             <div class="command"><span class="command-connector"> && </span> dotnet run</div>
                         </div>
+                        <button class="copy" onclick="CopyTerminalCommands(this)"><i class="far fa-copy"></i></button>
                     </div>
-                    <p class="h3 center">You want to learn more? Read the <a href="https://docs.tryphotino.io">documentation</a>.</p>
+                    <p class="h3 center">You want to learn more? Read the <a href="//docs.tryphotino.io">documentation</a>.</p>
                 </div>
             </section>
 
@@ -241,73 +244,5 @@
                 </div>
             </section>
         </div>
-
-        <script>
-            (() => {
-                // ---------------------
-                // Helpers
-                // ---------------------
-
-                /**
-                 * Gets an attribute of an element if it
-                 * exists or null if it doesn't.
-                 * 
-                 * @param {String} element The HTML element with the attribute
-                 * @param {String} attribute The attribute name you're looking for
-                 * @returns {String} The string value of the attribute 
-                 */
-                const GetAttrValue = (element, attribute) =>
-                {
-                    return element.hasAttribute(attribute)
-                        ? element.getAttribute(attribute)
-                        : null;
-                };
-
-                // ---------------------
-                // Document Functions
-                // ---------------------
-
-                /**
-                 * Initialize Graphs on the page.
-                 * 
-                 * @returns {void}
-                 */
-                const InitializeGraphs = () =>
-                {
-                    const graphs = document.querySelectorAll(".graph");
-    
-                    graphs.forEach(graph => {
-                        const groups = graph.querySelectorAll(".groups .group");
-                        
-                        groups.forEach(group => {
-                            const min = GetAttrValue(group, "data-min") ?? 0;
-                            const max = GetAttrValue(group, "data-max") ?? 100;
-                            const unit = GetAttrValue(group, "data-unit") ?? "%";
-        
-                            const bars = group.querySelectorAll(".bar");
-                            
-                            bars.forEach(bar => {
-                                const value = GetAttrValue(bar, "data-value");
-                                
-                                if (bar.hasAttribute("data-unit") === false) {
-                                    bar.setAttribute("data-unit", unit);
-                                }
-        
-                                if (value === null) {
-                                    bar.classList.add("error");
-                                    bar.style.width = "100%";
-                                }
-                                
-                                const percentage = parseFloat(value) / max * 100;
-                                bar.style.maxWidth = `${percentage}%`;
-                            });
-                        })
-                    });
-                };
-
-                // Document Initialization
-                InitializeGraphs();
-            })();
-        </script>
     </body>
 </html>

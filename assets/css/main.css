@@ -206,6 +206,12 @@ img.rounded {
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    img:not(.bright) {
+        filter: brightness(75%);
+    }
+}
+
 /* Alerts */
 .alert {
     display: block;

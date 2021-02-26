@@ -268,45 +268,66 @@ img.rounded {
     }
 
 /* Cross Platform Chrome */
+.cross-platform-chrome,
+.cross-platform-chrome > div {
+    height: calc(90vw * 0.625);
+    position: relative;
+}
+    .cross-platform-chrome > div {
+        position: absolute;
+        top: 0;
+    }
+    .cross-platform-chrome > div.top {
+        z-index: 10;
+    }
+    .cross-platform-chrome > div.left,
+    .cross-platform-chrome > div.right {
+        display: none;
+    }
 
-.cross-platform-chrome img.left,
-.cross-platform-chrome img.right {
-    display: none;
+        .cross-platform-chrome > div img {
+            display: block;
+            height: 100%;
+        }
+
+        .cross-platform-chrome > div .fab {
+            display: block;
+            color: #333;
+            font-size: 2em;
+            position: absolute;
+            right: 0.4em;
+            bottom: 0.33em;
+        }
+        .cross-platform-chrome > div.left .fab {
+            right: auto;
+            left: 0.4em;
+        }
+
+@media (min-width: 768px) {
+    .cross-platform-chrome,
+    .cross-platform-chrome > div {
+        height: calc(66vw * 0.625);
+        max-height: calc(1024px * 0.625);
+    }
+        .cross-platform-chrome > div.left,
+        .cross-platform-chrome > div.right {
+            display: block;
+            transform: translateX(-25%) scale(0.8);
+        }
+        .cross-platform-chrome > div.right {
+            transform: translateX(25%) scale(0.8);
+        }
 }
 
 @media (min-width: 1024px) {
-    .cross-platform-chrome {
-        height: 40vh;
-        min-height: 400px;
-        max-height: 550px;
-        position: relative;
-    }
-        .cross-platform-chrome img {
-            height: 100%;
-            margin: 0 auto;
-        }
-        .cross-platform-chrome img.top {
-            position: relative;
-            z-index: 10;
-        }
-        .cross-platform-chrome img.left,
-        .cross-platform-chrome img.right {
-            display: block;
-            height: 80%;
-            position: absolute;
-            top: 15%;
-            left: 0;
-            z-index: 0;
-        }
-        .cross-platform-chrome img.right {
-            left: auto;
-            right: 0%;
-        }
-}
-
-@media (prefers-color-scheme: dark) {
-    .cross-platform-chrome {
-        filter: brightness(75%);
+    .cross-platform-chrome,
+    .cross-platform-chrome > div {
+        height: calc((66vw - 224px) * 0.625);
+        max-height: calc(800px * 0.625);
+        margin: 0 112px;
+    }  
+    .cross-platform-chrome > div .fab {
+        font-size: 3em;
     }
 }
 

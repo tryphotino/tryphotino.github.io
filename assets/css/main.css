@@ -21,6 +21,11 @@ body {
     }
 }
 
+/* Helpers */
+.hidden {
+    display: none !important;
+}
+
 /* Typography */
 h1, h2, h3, h4,
 .h1, .h2, .h3, .h4 {
@@ -436,12 +441,12 @@ img.rounded {
         background: rgba(70, 76, 102, 0.8);
     }
 
-    .terminal button.copy {
+    .terminal button.copy-to-clipboard {
         display: none;
     }
 
 @media (min-width: 768px) {
-    .terminal button.copy {
+    .terminal button.copy-to-clipboard {
         display: block;
         background: rgba(70, 76, 102, 0.65);
         color: #fff;
@@ -452,19 +457,19 @@ img.rounded {
         bottom: 1em;
         cursor: pointer;
     }
-    .terminal button:hover {
+    .terminal button.copy-to-clipboard:hover {
         background: rgba(70, 76, 102, 1);
     }
-        .terminal button.copied {
+        .terminal button.copy-to-clipboard.copied {
             background: #72b972;
         }
-            .terminal button.copied::before {
+            .terminal button.copy-to-clipboard.copied::before {
                 content: "Copied to clipboard!";
                 color: #fff;
                 margin: 0 1ex 0 0;
             }
         
-        .terminal button.error {
+        .terminal button.copy-to-clipboard.error {
             background: #d45353;
         }
 }

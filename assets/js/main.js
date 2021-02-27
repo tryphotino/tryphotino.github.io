@@ -60,16 +60,49 @@ function InitializeGraphs()
 }
 
 /**
- * Copy commands from a terminal
+ * Initialize "Terminal"'s Copy to Clipboard Button
+ * 
+ * Make sure the browser supports copying to the
+ * clipboard, attach event handlers and make buttons visible.
+ * 
+ * @returns {void}
  */
-function CopyTerminalCommands(self)
+function InitializeTerminalCopyToClipboardButtons()
 {
-    if (!self) {
+    // If the browser doesn't support
+    // clipboard features, remove the button. 
+    if (typeof(navigator.clipboard?.writeText) !== 'function') {
+        console.warn('The browser doesn\'t support clipboard features.');
+        return;
+    }
+
+    // Attach event listener to all buttons we can find
+    [...document.querySelectorAll('button.copy-to-clipboard')]
+        .forEach(btn => {
+            btn.classList.remove('hidden');
+            btn.addEventListener('click', CopyTerminalCommandsToClipboard);
+        });
+}
+
+/**
+ * Copy Terminal Commands to Clipboard
+ * 
+ * Copies the "terminal"'s command into the user's
+ * clipboard, so they can paste them into their
+ * system terminal and get started using Photino.
+ * 
+ * @param {MouseEvent} event 
+ * @returns {void}
+ */
+function CopyTerminalCommandsToClipboard(event)
+{
+    if (!event) {
         console.error("ArgumentNullException: 'self' doesn't accept null as argument.");
         return;
     }
 
-    const terminal = self.closest('.terminal');
+    const button = event.target;
+    const terminal = button.closest('.terminal');
     
     if (!terminal) {
         console.log("NullReferenceException: Could not find parent terminal.");
@@ -86,17 +119,17 @@ function CopyTerminalCommands(self)
         .clipboard
         .writeText(commands)
         .then(() => {
-            self.classList.add("copied");
+            button.classList.add("copied");
             window.setTimeout(() => {
-                self.classList.remove("copied");
+                button.classList.remove("copied");
             }, 2000);
         })
         .catch(error => {
-            self.classList.add("error");
+            button.classList.add("error");
             alert(`Error copying commands: ${error}`);
             
             window.setTimeout(() => {
-                self.classList.remove("error");
+                button.classList.remove("error");
             }, 2000);
         });
 }
@@ -106,4 +139,5 @@ function CopyTerminalCommands(self)
 // -----------------------
 window.onload = () => {
     InitializeGraphs();
+    InitializeTerminalCopyToClipboardButtons();
 };

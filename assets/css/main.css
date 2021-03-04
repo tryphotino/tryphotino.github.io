@@ -48,6 +48,7 @@ h2, .h2 {
 
 h3, .h3 {
     font-size: 1.2em;
+    line-height: 1.3em;
 }
 
 p {
@@ -181,32 +182,38 @@ img.inline {
     display: inline-block;
 }
 
-img.flexible {
+img.flexible,
+video.flexible {
     display: block;
     max-width: 90%;
     margin: 0 auto;
 }
 
-img.stretch {
+img.stretch,
+video.stretch {
     display: block;
     width: 90%;
     margin: 0 auto;
 }
 
-img.shadow {
+img.shadow,
+video.shadow {
     box-shadow: 0 0 20px rgba(0, 0, 0, .3);
 }
 
-img.rounded {
+img.rounded,
+video.rounded {
     border-radius: 3px;
 }
 
 @media (min-width: 768px) {
-    img.flexible {
+    img.flexible,
+    video.flexible {
         max-width: 100%;
     }
 
-    img.stretch {
+    img.stretch,
+    video.stretch {
         width: 100%;
     }
 }

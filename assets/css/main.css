@@ -247,6 +247,9 @@ img.rounded {
         .alert.warning {
             background: #c48532;
         }
+        .alert.warning a {
+            color: #1E5078;
+        }
 }
 
 /* Photino logo */

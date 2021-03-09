@@ -131,12 +131,17 @@
                             <div class="command"><span class="command-connector"> && </span> dotnet new -l<span class="command-newline"> \</span></div>
                         </div>
                         <div>
-                            <div class="comment">Create a new sample app from the Photino.HelloPhotino.NET template</div>
-                            <div class="command"><span class="command-connector"> && </span> dotnet new photinoapp<span class="command-newline"> \</span></div>
+                            <div class="comment">Navigate to the folder in which to create a new sub-folder for the new project</div>
+                            <div class="command"><span class="command-connector"> && </span> cd MyProjects<span class="command-newline"> \</span></div>
                         </div>
                         <div>
-                            <div class="comment">Change into sample app directory</div>
-                            <div class="command"><span class="command-connector"> && </span> cd PhotinoSampleApp<span class="command-newline"> \</span></div>
+                            <div class="comment">Create a new sample app from the Photino.HelloPhotino.NET template</div>
+                            <div class="comment">A folder will be created to match your -o parameter</div>
+                            <div class="command"><span class="command-connector"> && </span> dotnet new photinoapp -o MyPhotinoApp<span class="command-newline"> \</span></div>
+                        </div>
+                        <div>
+                            <div class="comment">Navigate into the new folder you just created</div>
+                            <div class="command"><span class="command-connector"> && </span> cd MyPhotinoApp<span class="command-newline"> \</span></div>
                         </div>
                         <div>
                             <div class="comment">Run the application</div>

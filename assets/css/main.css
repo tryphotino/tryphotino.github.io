@@ -546,6 +546,7 @@ video.rounded {
         display: block;
         background: #e1e1e1;
         height: 1.5em;
+        min-width: 2px;
         margin: 2em 0 0.5em 0;
         line-height: 1.3em;
         border-radius: 0 3px 3px 0;
@@ -565,6 +566,7 @@ video.rounded {
             content: attr(data-value) " " attr(data-unit);
             width: 100%;
             margin-left: calc(100% + 0.5em);
+            font-size: 0.8em;
             white-space: nowrap;
         }
 
@@ -579,6 +581,12 @@ video.rounded {
             text-align: left;
             margin: 0 0 0 1em;
         }
+    
+    .graph .footer {
+        margin: 2.5em 0 -1em;
+        font-size: 0.8em;
+        text-align: center;
+    }
 
 @media (min-width: 1200px) {
     .graph .groups .group + .group {
@@ -718,9 +726,7 @@ video.rounded {
         min-width: 500px;
     }
 
-    #download-size-graph .groups .group {
-        margin-left: 200px;
-    }
+    #download-size-graph .groups .group,
     #memory-use-graph .groups .group {
         margin-left: 150px;
     }

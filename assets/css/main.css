@@ -639,6 +639,12 @@ video.rounded {
         border-top: 1px solid #c5d4f0;
         border-bottom: 1px solid #c5d4f0;
     }
+    #app section.bg-dotnet-gradient {
+        background: linear-gradient(180deg, #7014E8 9.04%, #4931DE);
+        color: #FFF;
+        border-top: 1px solid #7c22f1;
+        border-bottom: 1px solid #5e48f1;
+    }
     #app section:not([class*="bg-"]) + section:not([class*="bg-"]),
     #app section.bg-grey + section.bg-grey,
     #app section.bg-blue + section.bg-blue {
@@ -681,6 +687,7 @@ video.rounded {
 #photino-dotnet img {
     height: 100px;
     margin: 1em 1em 0;
+    border: 2px solid #FFF;
 }
 
 /* Photino vs. Electron */

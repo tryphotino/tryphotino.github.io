@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#072844">
         <meta name="title" content="Photino: Native, Cross-Platform Web UI Desktop Apps">
         <meta name="description" content="Photino is a lightweight open-source framework for building native, cross-platform desktop applications with Web UI technology.">
         <meta name="keywords" content="Native, Cross-Platform, Desktop, Desktop Applications, Web UI, Web Technology, .NET, dotnet, C#, csharp">
@@ -24,15 +23,15 @@
         <title>Photino: Native, Cross-Platform Web UI Desktop Apps</title>
 
         <link rel="stylesheet" href="assets/css/main.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Noto+Sans+KR:wght@300;500;700&display=swap"> 
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
 
-        <script src="https://kit.fontawesome.com/37017d0b3a.js" crossorigin="anonymous"></script>
-        <script src="assets/js/main.js"></script>
+        <link rel="icon" sizes="16x16 32x32 48x48" href="favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="icon" type="image/svg+xml" sizes="any" href="favicon.svg">
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="manifest" href="site.webmanifest">
+
+        <script src="assets/js/main.js" defer></script>
 
         <script type="text/javascript">
             (function(c,l,a,r,i,t,y){
@@ -43,279 +42,291 @@
         </script>
     </head>
     <body>
+        <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <symbol id="icon-github" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54l-.02-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.63 1.22 3.27.94.1-.73.39-1.22.71-1.5-2.5-.29-5.12-1.25-5.12-5.56 0-1.23.44-2.24 1.16-3.03-.12-.28-.5-1.43.11-2.99 0 0 .95-.3 3.1 1.16a10.8 10.8 0 0 1 5.64 0c2.15-1.46 3.1-1.16 3.1-1.16.61 1.56.23 2.71.11 2.99.72.79 1.16 1.8 1.16 3.03 0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.04.76 2.08l-.01 3.1c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z"/>
+            </symbol>
+            <symbol id="icon-windows" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M1 4.3l9.3-1.3v8.4H1zm10.5-1.5L23 1.2v10.2H11.5zM1 12.6h9.3V21L1 19.7zm10.5 0H23v10.2l-11.5-1.6z"/>
+            </symbol>
+            <symbol id="icon-apple" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M17.1 12.6a5 5 0 0 1 2.6-4.3 5.6 5.6 0 0 0-4.3-2.3c-1.8-.2-3.4 1-4.3 1s-2.3-1-3.8-1C4.2 6.1 2 8.8 2 12c0 2.1.8 4.5 2 6.3 1 1.6 2.3 3.3 3.9 3.2 1.5 0 2.1-.9 3.9-.9 1.7 0 2.3.9 3.9.9 1.7 0 2.8-1.6 3.8-3.1.8-1.2 1.1-2.3 1.2-2.4a4.8 4.8 0 0 1-3.6-3.4ZM14.6 4.5a5.1 5.1 0 0 0 1.2-3.7 5.3 5.3 0 0 0-3.5 1.8 4.8 4.8 0 0 0-1.2 3.5 4.5 4.5 0 0 0 3.5-1.6Z"/>
+            </symbol>
+            <symbol id="icon-linux" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M12 1c-3.3 0-4.7 2.9-4.5 5.5C7.8 11 4 13.8 4 17l-1.6 2.4c-.8 1.3-.5 2.1.9 2.5l4.6 1.1c1.2.3 2.1-.2 2.7-1.2h3.1c.6 1 1.5 1.5 2.7 1.2l4.5-1.1c1.4-.4 1.7-1.2.9-2.5L20 17c0-3.3-3.8-6-3.5-10.5C16.7 3.7 15.3 1 12 1Z"/>
+                <path fill="white" d="M11.9 8.5c2 0 3.2 2.8 4.9 5.9 1.2 2.3.5 3.8-1 4.7h-7.5c-1.5-.9-2.1-2.4-.9-4.7 1.5-3.1 2.5-5.9 4.5-5.9ZM11.6 6.6c0-.9-1.8-1-1.8-.1 0 1 1.8 1 1.8.1Zm2.6 0c0-.9-1.8-1-1.8-.1 0 1 1.8 1 1.8.1ZM8.8 21.7l-5-1.1 1.7-3.3 3.9 2.8Zm6.4 0 5-1.1-1.7-3.3-3.9 2.8Z"/>
+                <path fill="white" d="m9.9 8.1 2.1-.7 2.1.7-2.1 1.2Z"/>
+            </symbol>
+            <symbol id="icon-code" viewBox="0 0 24 24">
+                <path d="m7 7-5 5 5 5m10-10 5 5-5 5M14.5 3.5l-5 17"/>
+            </symbol>
+            <symbol id="icon-monitor" viewBox="0 0 24 24">
+                <rect x="2" y="3" width="20" height="14" rx="1.2"/><path d="M12 17v5m-4 0h8"/>
+            </symbol>
+            <symbol id="icon-feather" viewBox="0 0 24 24">
+                <path fill="currentColor" stroke="none" d="M23 1C14 2 6 7 5.5 17L1 22l1 1 6-6c5 .1 8-2 10.5-4.9l-4.5 1 6-4.3C21.5 6.4 22.7 3.7 23 1Z"/>
+            </symbol>
+            <symbol id="icon-chevron" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+            <symbol id="icon-drive" viewBox="0 0 24 24">
+                <rect x="2" y="13" width="20" height="7" rx="1.5"/><path d="m2 14 3-9h14l3 9m-5 2.5h1"/>
+            </symbol>
+            <symbol id="icon-chip" viewBox="0 0 24 24">
+                <rect x="5" y="5" width="14" height="14" rx="1"/><path d="M8 2v3m4-3v3m4-3v3M8 19v3m4-3v3m4-3v3M2 8h3m-3 4h3m-3 4h3m14-8h3m-3 4h3m-3 4h3"/>
+            </symbol>
+            <symbol id="icon-doc" viewBox="0 0 24 24">
+                <path d="M5 2h9l5 5v15H5zm8 0v6h6M8.5 12h7m-7 4h7"/>
+            </symbol>
+            <symbol id="icon-message" viewBox="0 0 24 24">
+                <path d="M22 11.5a10 9 0 0 1-10 9 11 11 0 0 1-4-.7L2 22l1.6-5A8.5 8.5 0 0 1 2 11.5a10 9 0 0 1 20 0Z"/><path d="M7 12h.1m4.9 0h.1m4.9 0h.1"/>
+            </symbol>
+        </svg>
+        <a class="skip-link" href="#main-content">Skip to content</a>
         <div id="app">
-            <div class="alert warning" style="padding: 1.5em 0">
-                <p class="text-center">
-                    Questions? Reach out to us! <a href="mailto:info@tryphotino.io">info@tryphotino.io</a>
-                </p>
+            <div class="hero-shell">
+                <header class="site-header">
+                    <div class="container header-inner">
+                        <a class="brand" href="#intro">
+                            <img src="assets/images/photino-logo.svg" alt="Photino" width="410" height="76">
+                        </a>
+                        <nav class="main-nav" aria-label="Main navigation">
+                            <a href="#intro">Overview</a>
+                            <a href="#highlights">Features</a>
+                            <a href="#get-started">Get Started</a>
+                            <a href="https://docs.tryphotino.io">Docs</a>
+                            <a href="#behind-photino">Community</a>
+                        </nav>
+                        <a class="button button-outline header-github" href="https://github.com/tryphotino">
+                            <svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg>GitHub
+                        </a>
+                        <a class="header-credit" href="https://codemag.com/">
+                            <img src="assets/images/code-group-logo-white.png" alt="CODE Group" width="251" height="91">
+                            <span>open-source project</span>
+                        </a>
+                    </div>
+                </header>
+
+                <main id="main-content">
+                    <section id="intro" class="hero">
+                        <div class="container hero-inner">
+                            <div class="hero-copy">
+                                <h1><span>Native desktop apps.</span> <span>Web technologies.</span> <span>No heavyweight runtime.</span></h1>
+                                <p>Build lightweight, cross-platform desktop applications using the tools you already love.</p>
+                                <div class="actions">
+                                    <a class="button button-white" href="#get-started">Get Started <svg class="icon chevron" aria-hidden="true"><use href="#icon-chevron"/></svg></a>
+                                    <a class="button button-outline" href="https://github.com/tryphotino"><svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg>Explore GitHub</a>
+                                </div>
+                            </div>
+                            <div class="desktop-preview" role="img" aria-label="Photino for .NET sample app shown on Windows, macOS, and Linux">
+                                <div class="demo-window demo-mac" aria-hidden="true">
+                                    <div class="window-title"><span class="window-dots"><i></i><i></i><i></i></span></div>
+                                    <div class="window-lines"><i></i><i></i><i></i></div>
+                                    <svg class="icon window-platform" aria-hidden="true"><use href="#icon-apple"/></svg>
+                                </div>
+                                <div class="demo-window demo-linux" aria-hidden="true">
+                                    <div class="window-title"><span class="window-controls">− □ <b>×</b></span></div>
+                                    <div class="window-lines"><i></i><i></i><i></i></div>
+                                    <svg class="icon window-platform" aria-hidden="true"><use href="#icon-linux"/></svg>
+                                </div>
+                                <div class="demo-window demo-windows" aria-hidden="true">
+                                    <div class="window-title">
+                                        <img src="favicon-16x16.png" alt="" width="12" height="12">
+                                        Photino for .NET
+                                        <span class="window-controls">− □ ×</span>
+                                    </div>
+                                    <div class="window-content">
+                                        <img class="demo-logo" src="assets/images/photino-logo.svg" alt="" width="410" height="76">
+                                        <p>Hello to Photino for .NET</p>
+                                        <div class="window-lines"><i></i><i></i><i></i></div>
+                                        <span class="window-demo-action">Call .NET</span>
+                                    </div>
+                                    <svg class="icon window-platform" aria-hidden="true"><use href="#icon-windows"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="highlights" class="features" aria-label="Features">
+                        <div class="container">
+                            <div class="feature-grid">
+                                <article>
+                                    <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#icon-code"/></svg></span>
+                                    <h2>Native by design</h2>
+                                    <p>Build native desktop apps with HTML, JavaScript, and CSS for the UI and .NET for the backend.</p>
+                                </article>
+                                <article>
+                                    <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#icon-monitor"/></svg></span>
+                                    <h2>Cross-platform</h2>
+                                    <p>Write once and run on Windows, macOS, and Linux with one codebase and your preferred web framework.</p>
+                                </article>
+                                <article>
+                                    <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#icon-feather"/></svg></span>
+                                    <h2>Remarkably lightweight</h2>
+                                    <p>Photino uses the system web view, keeping applications small without bundling a browser engine.</p>
+                                </article>
+                            </div>
+                            <ul class="platforms" aria-label="Supported platforms">
+                                <li><svg class="icon windows-icon" aria-hidden="true"><use href="#icon-windows"/></svg>Windows</li>
+                                <li><svg class="icon" aria-hidden="true"><use href="#icon-apple"/></svg>macOS</li>
+                                <li><svg class="icon" aria-hidden="true"><use href="#icon-linux"/></svg>Linux</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="get-started" class="quick-start">
+                        <div class="container">
+                            <div class="quick-grid">
+                                <div id="dotnet-install-terminal" class="terminal">
+                                    <div class="terminal-bar">
+                                        <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                                        <span>Terminal</span>
+                                        <button class="copy-commands" type="button" hidden>Copy</button>
+                                        <span class="sr-only copy-status" role="status"></span>
+                                    </div>
+                                    <pre tabindex="0" aria-label="Photino setup commands"><code><span class="comment"># Install the Photino templates</span>
+<span class="command"><b>dotnet</b> new install TryPhotino.VSCode.Project.Templates</span>
+<span class="comment"># Create and run a desktop app</span>
+<span class="command"><b>dotnet</b> new photinoapp -o MyPhotinoApp</span>
+<span class="command"><b>cd</b> MyPhotinoApp</span>
+<span class="command"><b>dotnet</b> run</span></code></pre>
+                                </div>
+                                <div class="quick-copy">
+                                    <h2>From zero to desktop in minutes</h2>
+                                    <p>Get up and running quickly with .NET templates, clear documentation, and practical examples. Create, build, and run a native desktop app with just a few commands.</p>
+                                    <div class="actions">
+                                        <a class="button button-blue" href="https://docs.tryphotino.io/Quick-Start-for-.NET-Developers">Get Started <svg class="icon chevron" aria-hidden="true"><use href="#icon-chevron"/></svg></a>
+                                        <a class="text-link" href="https://docs.tryphotino.io">Read the Documentation <svg class="icon chevron" aria-hidden="true"><use href="#icon-chevron"/></svg></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <section class="quick-video" aria-labelledby="watch-photino">
+                                <h3 id="watch-photino">Watch Photino in six minutes</h3>
+                                <video poster="assets/images/photino-in-6-minutes-poster.png" preload="metadata" controls playsinline aria-labelledby="watch-photino">
+                                    <source src="assets/media/photino-in-six-minutes-web.mp4" type="video/mp4">
+                                    <source src="assets/media/photino-in-six-minutes-web.webm" type="video/webm">
+                                    <source src="assets/media/photino-in-six-minutes-web.mkv" type="video/x-matroska">
+                                    Your browser does not support embedded videos.
+                                </video>
+                                <a class="text-link" href="https://www.youtube.com/playlist?list=PLFKI6yCyOMWldTi7Mq_tw5mWK1yxAI-kW">More Photino videos</a>
+                            </section>
+                        </div>
+                    </section>
+
+                    <section id="photino-vs-electron" class="comparison">
+                        <div class="container">
+                            <div class="comparison-grid">
+                                <div class="comparison-copy">
+                                    <h2>Photino vs. Electron</h2>
+                                    <p>Photino uses the operating system’s web view, which can reduce download size and memory use.</p>
+                                </div>
+                                <div class="comparison-charts">
+                                    <div id="download-size-graph" class="chart">
+                                        <svg class="icon chart-icon" aria-hidden="true"><use href="#icon-drive"/></svg>
+                                        <h3>Application download size</h3>
+                                        <div class="chart-row"><span>Photino</span><span class="track" aria-hidden="true"><span style="width: 10.9%"></span></span><span class="chart-value">21.8 MB</span></div>
+                                        <div class="chart-row electron"><span>Electron</span><span class="track" aria-hidden="true"><span style="width: 97%"></span></span><span class="chart-value">194 MB</span></div>
+                                    </div>
+                                    <div id="memory-use-graph" class="chart">
+                                        <svg class="icon chart-icon" aria-hidden="true"><use href="#icon-chip"/></svg>
+                                        <h3>Memory use</h3>
+                                        <div class="chart-row"><span>Photino</span><span class="track" aria-hidden="true"><span style="width: 58%"></span></span><span class="chart-value">87 MB</span></div>
+                                        <div class="chart-row electron"><span>Electron</span><span class="track" aria-hidden="true"><span style="width: 87.33%"></span></span><span class="chart-value">131 MB</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <details class="section-details benchmark-details">
+                                <summary>Ubuntu 20.04 starter app · See all benchmark results</summary>
+                                <div class="details-body benchmark-results">
+                                    <p>Starter app measurements in MB for Photino for .NET 1.5.5 and Electron 12.0.0. The charts use the standalone Photino download.</p>
+                                    <table>
+                                        <caption>Download size (starter app)</caption>
+                                        <thead><tr><th scope="col">Platform</th><th scope="col">Electron</th><th scope="col">Photino standalone</th><th scope="col">Photino</th></tr></thead>
+                                        <tbody>
+                                            <tr><th scope="row">Windows 10</th><td>177</td><td>37.0</td><td>16.9</td></tr>
+                                            <tr><th scope="row">macOS 11.2</th><td>182</td><td>22.7</td><td>0.28</td></tr>
+                                            <tr><th scope="row">Ubuntu 20.04</th><td>194</td><td>21.8</td><td>0.28</td></tr>
+                                        </tbody>
+                                    </table>
+                                    <table>
+                                        <caption>Memory use (starter app)</caption>
+                                        <thead><tr><th scope="col">Platform</th><th scope="col">Electron</th><th scope="col">Photino</th></tr></thead>
+                                        <tbody>
+                                            <tr><th scope="row">Windows 10</th><td>53</td><td>68</td></tr>
+                                            <tr><th scope="row">macOS 11.2</th><td>92</td><td>48</td></tr>
+                                            <tr><th scope="row">Ubuntu 20.04</th><td>131</td><td>87</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </details>
+                        </div>
+                    </section>
+
+                    <section id="behind-photino" class="community">
+                        <div class="container">
+                            <h2>Open source. Built together.</h2>
+                            <p class="community-copy">Photino is an open-source project with contributions from developers around the world. Join the community, report issues, suggest features, or contribute code.</p>
+                            <div class="actions">
+                                <a class="button button-light" href="https://github.com/tryphotino"><svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg>View on GitHub <svg class="icon chevron" aria-hidden="true"><use href="#icon-chevron"/></svg></a>
+                                <a class="button button-light" href="https://docs.tryphotino.io"><svg class="icon" aria-hidden="true"><use href="#icon-doc"/></svg>Documentation</a>
+                                <a class="button button-light" href="https://github.com/tryphotino/photino.NET/issues"><svg class="icon" aria-hidden="true"><use href="#icon-message"/></svg>Report an Issue <svg class="icon chevron" aria-hidden="true"><use href="#icon-chevron"/></svg></a>
+                            </div>
+                            <div class="maintainer">
+                                <a class="magazine-mark" href="https://codemag.com/magazine">
+                                    <img src="assets/images/code-magazine-logo-white.png" alt="CODE Magazine" width="251" height="91">
+                                </a>
+                                <p>Maintained by CODE Magazine with the open-source community.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="project-details">
+                        <div class="container project-overview">
+                            <section id="about-photino">
+                                <h2>About Photino</h2>
+                                <p>Photino was inspired by Electron. It's an open-source project based on .NET. The goal of Photino is to enable developers to use Web UI (HTML, JavaScript, CSS, etc.) in native applications across platforms instead of learning platform-specific UI technologies.</p>
+                                <p>What is a Photino, you ask? It's a hypothetical subatomic particle and fermion superpartner of the photon as predicted by supersymmetry. It's a candidate for the lightest supersymmetric particle in the universe.</p>
+                            </section>
+                            <section id="how-it-works">
+                                <h2>How does Photino work?</h2>
+                                <p>Photino is a collection of packages that can be used for different platforms and technologies. The different packages use Photino.Native as their base package. Photino.Native is a C++ (and Objective-C) wrapper around the OS’s built-in Chromium or WebKit-based browser control in it. On Windows it uses the Chromium Edge based WebView2 control, on macOS it uses Safari’s WKWebView and on Linux it uses WebKitGTK+ 2. The Photino.Native package is compiled for each platform and distributed via NuGet.</p>
+                                <p>Using the native browser control reduces the overall footprint of a Photino application since there is no need to bundle WebKit in the application. Photino is cross-platform because the application communicates with the wrapper in exactly the same way on any OS. This means developers only need one code base for all desktop platforms.</p>
+                                <p>While we’re concentrating on using Photino with .NET, it could be used to build Web UIs for desktop applications written in any language, like C++, Go, Rust, Java, Objective-C and others!</p>
+                            </section>
+                            <section id="photino-dotnet">
+                                <h2>Photino for .NET and Blazor</h2>
+                                <p>Photino for .NET adds support for .NET to the Photino.Native package. With Photino for .NET you can build desktop applications with .NET backends and your Web Framework of choice. Since .NET is cross-platform it is the perfect candidate for robust and reusable code that runs everywhere.</p>
+                                <p>Photino.Blazor builds on top of Photino for .NET and adds the ability to build your application without having to know JavaScript or TypeScript at all.</p>
+                            </section>
+                        </div>
+                        <section id="whats-next" class="container project-news">
+                            <header>
+                                <h2>What’s next?</h2>
+                                <p class="project-news-date">News · <time datetime="2026-03-26">March 26, 2026</time></p>
+                            </header>
+                            <div class="project-news-copy">
+                                <p>We are pleased to announce a strategic shift in the development approach for the Photino project. In response to evolving time constraints within the team, we are transitioning to a workflow that is increasingly assisted and driven by AI agents.</p>
+                                <p>As part of this initiative, we will begin by leveraging GitHub Copilot to assist with the evaluation of submitted pull requests. These will be reviewed and merged as appropriate. Following this, Copilot will be utilized to triage open issues, determining which items to address, generating proposed solutions, and presenting them for our review prior to merging.</p>
+                                <p>The final phase of this transition involves the implementation of an automated testing suite using Playwright. This will help ensure that future changes, including those generated by AI, do not introduce unintended breaking changes or regressions into the Photino codebase.</p>
+                                <p>We look forward to the increased efficiency and consistency these enhancements will bring to the project.</p>
+                            </div>
+                        </section>
+                    </div>
+                </main>
             </div>
-            
-            <!-- Intro -->
-            <section id="intro">
-                <img class="photino-logo bright" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgICBpZD0icGhvdGluby1sb2dvIgogICAgd2lkdGg9IjQxMHB4IgogICAgaGVpZ2h0PSI3NnB4IgogICAgdmlld0JveD0iMCAwIDQxMCA3NiI+CiAgICA8c3ZnIGlkPSJwaG90aW5vLWNpcmNsZXMiPgogICAgICAgIDxjaXJjbGUgY3g9IjM4IiBjeT0iMzgiIHI9IjMzIgogICAgICAgICAgICBmaWxsPSJub25lIgogICAgICAgICAgICBmaWxsLW9wYWNpdHk9IjAiCiAgICAgICAgICAgIHN0cm9rZT0iIzFFNTA3OCIKICAgICAgICAgICAgc3Ryb2tlLXdpZHRoPSI4IiAvPgogICAgICAgIAogICAgICAgIDxjaXJjbGUgY3g9Ijc2IiBjeT0iMzgiIHI9IjMzIgogICAgICAgICAgICBmaWxsPSJub25lIgogICAgICAgICAgICBmaWxsLW9wYWNpdHk9IjAiCiAgICAgICAgICAgIHN0cm9rZT0iIzcyOTNhZCIKICAgICAgICAgICAgc3Ryb2tlLXdpZHRoPSI4IgogICAgICAgICAgICBzdHJva2UtZGFzaGFycmF5PSIxMywxMyI+CiAgICAgICAgICAgIDxhbmltYXRlVHJhbnNmb3JtCiAgICAgICAgICAgICAgICBhdHRyaWJ1dGVUeXBlPSJYTUwiCiAgICAgICAgICAgICAgICBhdHRyaWJ1dGVOYW1lPSJ0cmFuc2Zvcm0iCiAgICAgICAgICAgICAgICB0eXBlPSJyb3RhdGUiCiAgICAgICAgICAgICAgICBmcm9tPSIwIDc2IDM4IgogICAgICAgICAgICAgICAgdG89IjM2MCA3NiAzOCIKICAgICAgICAgICAgICAgIGR1cj0iMzBzIgogICAgICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+CiAgICAgICAgPC9jaXJjbGU+CiAgICA8L3N2Zz4KICAgIDxzdmcgaWQ9InBob3Rpbm8tdGV4dCIgeD0iMTE2IiB5PSI2IiB2aWV3Qm94PSIwIDAgNTAwIDEwMCI+CiAgICAgICAgPHBhdGgKICAgICAgICAgICAgZmlsbD0iIzFFNTA3OCIKICAgICAgICAgICAgc3Ryb2tlPSIjMUU1MDc4IgogICAgICAgICAgICBzdHJva2Utd2lkdGg9IjIiCiAgICAgICAgICAgIGQ9Ik0gNjIuNCA3OS42IEwgNzEuNSA3OS42IEwgNzEuNSA0MC4yIEEgODQuNTgzIDg0LjU4MyAwIDAgMSA3My44OTkgMzcuODgzIEMgNzguMTk1IDMzLjkxNSA4MS42NSAzMS45IDg2LjQgMzEuOSBDIDkyLjQxMSAzMS45IDk1LjU2NCAzNC44OTcgOTYuNDQyIDQxLjgyMiBBIDM2LjYyOSAzNi42MjkgMCAwIDEgOTYuNyA0Ni40IEwgOTYuNyA3OS42IEwgMTA1LjggNzkuNiBMIDEwNS44IDQ1LjIgQyAxMDUuOCAzMS4zIDEwMC42IDIzLjkgODkuMiAyMy45IEEgMjIuMTc4IDIyLjE3OCAwIDAgMCA3NC44OTMgMjkuNjIyIEEgNTAuODM5IDUwLjgzOSAwIDAgMCA3MS4yIDMzIEwgNzEuNSAyMS44IEwgNzEuNSAwIEwgNjIuNCAwIEwgNjIuNCA3OS42IFogTSAyNDcgNzkuNiBMIDI1Ni4xIDc5LjYgTCAyNTYuMSA0MC4yIEEgODQuNTgzIDg0LjU4MyAwIDAgMSAyNTguNDk5IDM3Ljg4MyBDIDI2Mi43OTUgMzMuOTE1IDI2Ni4yNSAzMS45IDI3MSAzMS45IEMgMjc3LjAxMSAzMS45IDI4MC4xNjQgMzQuODk3IDI4MS4wNDIgNDEuODIyIEEgMzYuNjI5IDM2LjYyOSAwIDAgMSAyODEuMyA0Ni40IEwgMjgxLjMgNzkuNiBMIDI5MC40IDc5LjYgTCAyOTAuNCA0NS4yIEMgMjkwLjQgMzEuMyAyODUuMiAyMy45IDI3My44IDIzLjkgQSAyMi42NTQgMjIuNjU0IDAgMCAwIDI1OS4wODUgMjkuOTI5IEEgNTYuNzU3IDU2Ljc1NyAwIDAgMCAyNTUuNiAzMy4xIEwgMjU1LjMgMzMuMSBMIDI1NC41IDI1LjMgTCAyNDcgMjUuMyBMIDI0NyA3OS42IFogTSAyMDguOSA3OC45IEwgMjA3LjEgNzIuMSBBIDI0LjUwOSAyNC41MDkgMCAwIDEgMjA1LjYyNCA3Mi42MTkgQyAyMDQuMDc2IDczLjEwOSAyMDIuMzIgNzMuNSAyMDAuOSA3My41IEEgMTAuOTUzIDEwLjk1MyAwIDAgMSAxOTcuNjE4IDczLjA1NSBDIDE5NC4wOSA3MS45NDcgMTkyLjY4NCA2OC44MDcgMTkyLjUxNyA2NC4wMTQgQSAyOS4yMTMgMjkuMjEzIDAgMCAxIDE5Mi41IDYzIEwgMTkyLjUgMzIuNyBMIDIwNy4yIDMyLjcgTCAyMDcuMiAyNS4zIEwgMTkyLjUgMjUuMyBMIDE5Mi41IDEwIEwgMTg0LjkgMTAgTCAxODMuOCAyNS4zIEwgMTc1LjMgMjUuOCBMIDE3NS4zIDMyLjcgTCAxODMuNCAzMi43IEwgMTgzLjQgNjIuOCBBIDMwLjIzMyAzMC4yMzMgMCAwIDAgMTg0LjI4MyA3MC41NDMgQyAxODUuNTY1IDc1LjM0MiAxODguMzQxIDc4Ljc2OCAxOTMuMjUzIDgwLjE4MiBBIDIwLjQwOCAyMC40MDggMCAwIDAgMTk4LjkgODAuOSBDIDIwMi4wNzEgODAuOSAyMDUuNTE5IDc5Ljk3NyAyMDguNTM0IDc5LjAxNyBBIDk2LjcxMyA5Ni43MTMgMCAwIDAgMjA4LjkgNzguOSBaIE0gMCA3OS42IEwgOS4zIDc5LjYgTCA5LjMgNTAuNSBMIDIxLjQgNTAuNSBDIDM3LjUgNTAuNSA0OC40IDQzLjMgNDguNCAyNy44IEEgMjUuMjUxIDI1LjI1MSAwIDAgMCA0Ny4wMzUgMTkuMTU3IEMgNDMuNjkgOS45MzEgMzQuNDI5IDYuMzU5IDIxLjg2MiA2LjIwNSBBIDcwLjI2MiA3MC4yNjIgMCAwIDAgMjEgNi4yIEwgMCA2LjIgTCAwIDc5LjYgWiBNIDE0NC4yIDgwLjkgQyAxNTcuNSA4MC45IDE2OS40IDcwLjUgMTY5LjQgNTIuNSBBIDM0LjM1NSAzNC4zNTUgMCAwIDAgMTY3LjMzNyA0MC40MDYgQyAxNjMuMzY4IDI5LjgxIDE1NC4xNzggMjMuOSAxNDQuMiAyMy45IEMgMTMwLjkgMjMuOSAxMTkgMzQuNCAxMTkgNTIuNSBBIDMzLjk0IDMzLjk0IDAgMCAwIDEyMS4wNjUgNjQuNTI2IEMgMTI1LjAzNSA3NS4wNDggMTM0LjIyMyA4MC45IDE0NC4yIDgwLjkgWiBNIDMyOS4yIDgwLjkgQyAzNDIuNSA4MC45IDM1NC40IDcwLjUgMzU0LjQgNTIuNSBBIDM0LjM1NSAzNC4zNTUgMCAwIDAgMzUyLjMzNyA0MC40MDYgQyAzNDguMzY4IDI5LjgxIDMzOS4xNzggMjMuOSAzMjkuMiAyMy45IEMgMzE1LjkgMjMuOSAzMDQgMzQuNCAzMDQgNTIuNSBBIDMzLjk0IDMzLjk0IDAgMCAwIDMwNi4wNjUgNjQuNTI2IEMgMzEwLjAzNSA3NS4wNDggMzE5LjIyMyA4MC45IDMyOS4yIDgwLjkgWiBNIDIxOS41IDc5LjYgTCAyMjguNiA3OS42IEwgMjI4LjYgMjUuMyBMIDIxOS41IDI1LjMgTCAyMTkuNSA3OS42IFogTSAxNDQuMiA3My4zIEMgMTM0LjggNzMuMyAxMjguNSA2NSAxMjguNSA1Mi41IEEgMzAuNTcyIDMwLjU3MiAwIDAgMSAxMjkuNzU1IDQzLjUyOSBDIDEzMC43MTggNDAuMzk5IDEzMi4yMDggMzcuNzY4IDEzNC4xMjggMzUuNzc0IEEgMTMuNjQ3IDEzLjY0NyAwIDAgMSAxNDQuMiAzMS41IEMgMTUyLjczNyAzMS41IDE1OC44IDM4LjUxMSAxNTkuODQxIDQ5LjE2MiBBIDM0LjMyMSAzNC4zMjEgMCAwIDEgMTYwIDUyLjUgQyAxNjAgNTkuNiAxNTcuOTM1IDY1LjM0NSAxNTQuNDI4IDY4Ljk4NCBBIDEzLjg2NyAxMy44NjcgMCAwIDEgMTQ0LjIgNzMuMyBaIE0gMzI5LjIgNzMuMyBDIDMxOS44IDczLjMgMzEzLjUgNjUgMzEzLjUgNTIuNSBBIDMwLjU3MiAzMC41NzIgMCAwIDEgMzE0Ljc1NSA0My41MjkgQyAzMTUuNzE4IDQwLjM5OSAzMTcuMjA4IDM3Ljc2OCAzMTkuMTI4IDM1Ljc3NCBBIDEzLjY0NyAxMy42NDcgMCAwIDEgMzI5LjIgMzEuNSBDIDMzNy43MzcgMzEuNSAzNDMuOCAzOC41MTEgMzQ0Ljg0MSA0OS4xNjIgQSAzNC4zMjEgMzQuMzIxIDAgMCAxIDM0NSA1Mi41IEMgMzQ1IDU5LjYgMzQyLjkzNSA2NS4zNDUgMzM5LjQyOCA2OC45ODQgQSAxMy44NjcgMTMuODY3IDAgMCAxIDMyOS4yIDczLjMgWiBNIDkuMyA0MyBMIDkuMyAxMy44IEwgMTkuOCAxMy44IEEgNDguNjk5IDQ4LjY5OSAwIDAgMSAyNi43NDcgMTQuMjM1IEMgMzMuOTU2IDE1LjI4NCAzOC4wNDggMTguMzUxIDM4Ljk4OSAyNC43MjMgQSAyMS4wODIgMjEuMDgyIDAgMCAxIDM5LjIgMjcuOCBBIDE4LjY0NiAxOC42NDYgMCAwIDEgMzguMjE5IDM0LjE0OSBDIDM2LjI5NyAzOS40NjkgMzEuNTI1IDQyLjI2NCAyMy42ODkgNDIuODcyIEEgNDUuMTQ3IDQ1LjE0NyAwIDAgMSAyMC4yIDQzIEwgOS4zIDQzIFogTSAyMjQuMSAxNC4xIEEgNi42MTkgNi42MTkgMCAwIDAgMjI3LjIzOSAxMy4zNjQgQyAyMjkuMDcxIDEyLjM4NSAyMzAuMiAxMC40ODYgMjMwLjIgOCBBIDYuMDk4IDYuMDk4IDAgMCAwIDIyOS4zNzEgNC44MzMgQyAyMjguMzUxIDMuMTM0IDIyNi40NjMgMi4xIDIyNC4xIDIuMSBDIDIyMC41IDIuMSAyMTggNC41IDIxOCA4IEEgNi42ODkgNi42ODkgMCAwIDAgMjE4LjY0IDEwLjk1NiBDIDIxOS40NjQgMTIuNjQyIDIyMS4wMzIgMTMuNzQ0IDIyMy4wNDQgMTQuMDI4IEEgNy41NyA3LjU3IDAgMCAwIDIyNC4xIDE0LjEgWiIgLz4KICAgIDwvc3ZnPgo8L3N2Zz4=">
-                <div class="hero">
-                    <h1 class="hero-title text-center">
-                        Build native, cross-platform desktop apps<br>
-                        that are lighter than light.
-                    </h1>
-                    <p class="hero-subtitle text-center">
-                        Photino is a lightweight open-source framework for building native,<br>
-                        cross-platform desktop applications with Web UI technology.
-                    </p>
-                    <div class="text-center">
-                        <a href="#get-started" class="button primary" style="width: 175px">Get Started</a>
-                        <a href="https://docs.tryphotino.io" class="button" style="width: 175px">Documentation</a>
-                    </div>
-                </div>
-                <div class="cross-platform-chrome">
-                    <div class="top">
-                        <img src="assets/images/photino-hello-world-windows.png"
-                            alt="Photino Hello world screen for Windows 10"
-                            class="shadow">
-                        <div class="fab fa-windows"></div>
-                    </div>
 
-                    <div class="right">
-                        <img src="assets/images/photino-hello-world-linux.png"
-                             alt="Photino Hello world screen for Linux"
-                             class="shadow">
-                        <div class="fab fa-linux"></div>
-                    </div>
-
-                    <div class="left">
-                        <img src="assets/images/photino-hello-world-mac.png"
-                            alt="Photino Hello world screen for macOS"
-                            class="shadow">
-                        <div class="fab fa-apple"></div>
-                    </div>
+            <footer class="site-footer">
+                <div class="container footer-inner">
+                    <a class="brand footer-brand" href="#intro"><img src="assets/images/photino-logo.svg" alt="Photino" width="410" height="76"></a>
+                    <a class="footer-credit" href="https://codemag.com/">
+                        <span>Part of the CODE Group ecosystem</span>
+                        <img src="assets/images/code-group-logo-white.png" alt="" width="251" height="91">
+                    </a>
+                    <nav class="footer-nav" aria-label="Footer navigation">
+                        <div><h2>Product</h2><a href="#intro">Overview</a><a href="#highlights">Features</a><a href="#get-started">Get Started</a></div>
+                        <div><h2>Resources</h2><a href="https://docs.tryphotino.io">Documentation</a><a href="https://github.com/tryphotino/photino.Samples">Examples</a><a href="https://github.com/tryphotino">GitHub</a></div>
+                        <div><h2>Community</h2><a href="https://docs.tryphotino.io/Contributor-Info-Dev-Process">Contribute</a><a href="https://github.com/tryphotino/photino.NET/issues">Issues</a><a href="https://github.com/tryphotino/photino.NET/discussions">Discussions</a><a id="contact-us" href="mailto:info@tryphotino.io">Contact</a></div>
+                    </nav>
                 </div>
-            </section>
-    
-            <!-- Hightlights -->
-            <section id="highlights" class="bg-transparent">
-                <div class="grid">
-                    <div class="grid-item text-center">
-                        <i class="fas fa-microchip fa-3x"></i>
-                        <h3>Native Applications</h3>
-                        <p>Photino enables developers to use fast, natively compiled languages like C#, C++, Java and more.</p>
-                        <p>Use your favorite development frameworks like .NET.</p>
-                    </div>
-                    <div class="grid-item text-center">
-                        <i class="fas fa-plug fa-3x"></i>
-                        <h3>Cross-Platform UI</h3>
-                        <p>Build desktop apps with Web UI frameworks like Blazor, React, Angular, Vue, etc.!</p>
-                        <p>Photino uses the OS’s built-in Chromium or WebKit-based browser control for Windows, macOS and Linux.</p>
-                    </div>
-                    <div class="grid-item text-center">
-                        <i class="fas fa-feather-alt fa-3x"></i>
-                        <h3>Lightweight</h3>
-                        <p>Photino is the lightest cross-platform framework. Compared to Electron, a Photino app is far smaller!</p>
-                        <p>And it uses far less system memory too!<br><a href="#photino-vs-electron">See comparison.</a></p>
-                    </div>
-                </div>
-            </section>
-    
-            <!-- Get Started -->
-            <section id="get-started" class="bg-grey">
-                <div>
-                    <h2 class="text-center">Get Started with Photino for .NET</h2>
-                    <p class="text-center">To get started, simply follow the instructions below. There are templates available for Blazor, Vue, Angular, React and gRPC starter apps. We've added some helpful comments to the sample apps to explain everything.</p>
-                    <div id="dotnet-install-terminal" class="terminal">
-                        <div>
-                            <div class="comment">Install .NET templates</div>
-                            <div class="comment">To list all available templates use <code>dotnet new -l</code></div>
-                            <div class="command">dotnet new install TryPhotino.VSCode.Project.Templates<span class="command-newline"> \</span></div>
-                        </div>
-                        <div>
-                            <div class="comment">Create a new sample app from the Photino.HelloPhotino.NET template</div>
-                            <div class="comment">A folder will be created to match your -o parameter</div>
-                            <div class="command"><span class="command-connector"> && </span> dotnet new photinoapp -o MyPhotinoApp<span class="command-newline"> \</span></div>
-                        </div>
-                        <div>
-                            <div class="comment">Navigate into the new folder you just created</div>
-                            <div class="command"><span class="command-connector"> && </span> cd MyPhotinoApp<span class="command-newline"> \</span></div>
-                        </div>
-                        <div>
-                            <div class="comment">Run the application</div>
-                            <div class="command"><span class="command-connector"> && </span> dotnet run</div>
-                        </div>
-                        <button class="copy-to-clipboard hidden"><i class="far fa-copy"></i></button>
-                        <div>NOTE: For Windows Powershell, use semicolon (;) instead of && to connect multiple commands.</div>
-                    </div>
-                    <div class="h3 text-center">
-                        Do you want to learn more?<br>
-                        <a href="https://docs.tryphotino.io">Read the documentation</a> and <a href="https://github.com/tryphotino">visit us on Github</a>!
-                    </div>
-                </div>
-                <div>
-                    <div class="h3 text-center" style="margin: 2em 0;">or watch</div>
-                    <video
-                        class="center flexible rounded shadow"
-                        poster="assets/images/photino-in-6-minutes-poster.png"
-                        preload="metadata"
-                        controls>
-                                
-                        <source src="assets/media/photino-in-six-minutes-web.mp4"
-                                type="video/mp4">
-
-                        <source src="assets/media/photino-in-six-minutes-web.webm"
-                                type="video/webm">
-                                
-                        <source src="assets/media/photino-in-six-minutes-web.mkv"
-                                type="video/x-matroska">
-
-                        Sorry, your browser doesn't support embedded videos.
-                    </video>
-                </div>
-                
-                <p class="text-center">
-                    Additional videos <a href="https://www.youtube.com/playlist?list=PLFKI6yCyOMWldTi7Mq_tw5mWK1yxAI-kW">here</a>
-                </p>
-            </section>
-
-            <!-- About Photino -->
-            <section id="about-photino">
-                <div class="text-center">
-                    <h2>About Photino</h2>
-                    <p>Photino was inspired by Electron. It's an open-source project based on .NET. The goal of Photino is to enable developers to use Web UI (HTML, JavaScript, CSS, etc.) in native applications across platforms instead of learning platform-specific UI technologies.</p>
-                    <p>What is a Photino, you ask? It's a hypothetical subatomic particle and fermion superpartner of the photon as predicted by supersymmetry. It's a candidate for the lightest supersymmetric particle in the universe.</p>
-                </div>
-            </section>
-
-            <!-- How does Photino work? -->
-            <section id="how-it-works">
-                <div class="text-center">
-                    <h2>How does Photino work?</h2>
-                    <div class="columns three">
-                        <p>Photino is a collection of packages that can be used for different platforms and technologies. The different packages use Photino.Native as their base package. Photino.Native is a C++ (and Objective-C) wrapper around the OS’s built-in Chromium or WebKit-based browser control in it. On Windows it uses the Chromium Edge based WebView2 control, on macOS it uses Safari’s WKWebView and on Linux it uses WebKitGTK+ 2. The Photino.Native package is compiled for each platform and distributed via NuGet.</p>
-                        <p>Using the native browser control reduces the overall footprint of a Photino application since there is no need to bundle WebKit in the application. Photino is cross-platform because the application communicates with the wrapper in exactly the same way on any OS. This means developers only need one code base for all desktop platforms.</p>
-                        <p>While we’re concentrating on using Photino with .NET, it could be used to build Web UIs for desktop applications written in any language, like C++, Go, Rust, Java, Objective-C and others!</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Photino for .NET -->
-            <section id="photino-dotnet" class="bg-dotnet-gradient">
-                <div class="text-center">
-                    <h2>Photino for .NET and Blazor</h2>
-                    <p>Photino for .NET adds support for .NET to the Photino.Native package. With Photino for .NET you can build desktop applications with .NET backends and your Web Framework of choice. Since .NET is cross-platform it is the perfect candidate for robust and reusable code that runs everywhere.</p>
-                    <p>Photino.Blazor builds on top of Photino for .NET and adds the ability to build your application without having to know JavaScript or TypeScript at all.</p>
-                    <img src="assets/images/dotnet-logo.svg" alt=".NET Logo" class="inline bright">
-                </div>
-            </section>
-
-            <!-- Photino vs. Electron -->
-            <section id="photino-vs-electron">
-                <div>
-                    <h2 class="text-center">Photino vs. Electron</h2>
-                    <div class="grid margin-lg">
-                        <div class="grid-item align-center">
-                            <h3>Download size comparison</h3>
-                            <ul>
-                                <li>Photino does not require NodeJS for backend work.</li>
-                                <li>Photino is smaller and more lightweight. It does not require a bundled install of the Chromium engine or NodeJS runtime.</li>
-                                <li>If .NET is already available on the OS the size difference is huge!</li>
-                            </ul>
-                        </div>
-                        <div class="grid-item">
-                            <div id="download-size-graph" class="graph">
-                                <div class="title">Download size (starter app)</div>
-                                <div class="groups">
-                                    <div class="group" data-min="0" data-max="250" data-unit="MB">
-                                        <div class="strong">Windows 10</div>
-                                        <div class="bar" data-label="Electron" data-value="177"></div>
-                                        <div class="bar blue" data-label="Photino (standalone)" data-value="37.0"></div>
-                                        <div class="bar blue" data-label="Photino" data-value="16.9"></div>
-                                    </div>
-                                    <div class="group" data-min="0" data-max="250" data-unit="MB">
-                                        <div class="strong">macOS 11.2</div>
-                                        <div class="bar" data-label="Electron" data-value="182"></div>
-                                        <div class="bar blue" data-label="Photino (standalone)" data-value="22.7"></div>
-                                        <div class="bar blue" data-label="Photino" data-value="0.28"></div>
-                                    </div>
-                                    <div class="group" data-min="0" data-max="250" data-unit="MB">
-                                        <div class="strong">Ubuntu 20.04</div>
-                                        <div class="bar" data-label="Electron" data-value="194"></div>
-                                        <div class="bar blue" data-label="Photino (standalone)" data-value="21.8"></div>
-                                        <div class="bar blue" data-label="Photino" data-value="0.28"></div>
-                                    </div>
-                                </div>
-                                <div class="footer">(Photino for .NET 1.5.5 / Electron 12.0.0)</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid margin-lg">
-                        <div class="grid-item grid-order-xs-2">
-                            <div id="memory-use-graph" class="graph">
-                                <div class="title">Memory use (starter app)</div>
-                                <div class="groups">
-                                    <div class="group" data-min="0" data-max="200" data-unit="MB">
-                                        <div class="strong">Windows 10</div>
-                                        <div class="bar" data-label="Electron" data-value="53"></div>
-                                        <div class="bar blue" data-label="Photino" data-value="68"></div>
-                                    </div>
-                                    <div class="group" data-min="0" data-max="200" data-unit="MB">
-                                        <div class="strong">macOS 11.2</div>
-                                        <div class="bar" data-label="Electron" data-value="92"></div>
-                                        <div class="bar blue" data-label="Photino" data-value="48"></div>
-                                    </div>
-                                    <div class="group" data-min="0" data-max="200" data-unit="MB">
-                                        <div class="strong">Ubuntu 20.04</div>
-                                        <div class="bar" data-label="Electron" data-value="131"></div>
-                                        <div class="bar blue" data-label="Photino" data-value="87"></div>
-                                    </div>
-                                </div>
-                                <div class="footer">(Photino for .NET 1.5.5 / Electron 12.0.0)</div>
-                            </div>
-                        </div>
-                        <div class="grid-item grid-order-xs-1 align-center">
-                            <h3>Memory Usage Comparison</h3>
-                            <ul>
-                                <li>Photino aims to use far less memory than Electron.</li>
-                                <li>Memory use is especially low on macOS and Linux where the native browser control is far more efficient than Chromium.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <p class="text-center">While Photino brings a lot of advantages over Electron, it is still in its early development and not as feature rich as Electron. But we’re inviting the open-source community to help improve Photino! You’re welcome to join and add missing functionality that you need, fix bugs and submit pull request.</p>
-                </div>
-            </section>
-
-            <section id="whats-next" class="bg-grey">
-                <div>
-                    <div class="text-center">
-                        <h2>What’s next?</h2>
-                        <p><b>NEWS: 3/26/2026</b><br>
-We are pleased to announce a strategic shift in the development approach for the Photino project. In response to evolving time constraints within the team, we are transitioning to a workflow that is increasingly assisted and driven by AI agents.
-<br>
-As part of this initiative, we will begin by leveraging GitHub Copilot to assist with the evaluation of submitted pull requests. These will be reviewed and merged as appropriate. Following this, Copilot will be utilized to triage open issues, determining which items to address, generating proposed solutions, and presenting them for our review prior to merging.
-<br>
-The final phase of this transition involves the implementation of an automated testing suite using Playwright. This will help ensure that future changes, including those generated by AI, do not introduce unintended breaking changes or regressions into the Photino codebase.
-<br>
-We look forward to the increased efficiency and consistency these enhancements will bring to the project.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="behind-photino">
-                <div class="text-center">
-                    <h2>Who is behind Photino?</h2>
-                    <p>
-                        Photino is maintained by <a href="https://codemag.com/">CODE Magazine</a> with the help of the open-source community.<br>
-                        Join the Photino community on GitHub at <a href="https://github.com/tryphotino">github.com/tryphotino</a>.
-                    </p>
-                </div>
-            </section>
-
-            <section id="contact-us" class="bg-blue" style="padding-bottom: 2em;">
-                <div class="text-center">
-                    <p>
-                        <i class="far fa-envelope-open fa-4x"></i>
-                    </p>
-                    <p>
-                        Do you have any more questions? Get in touch at <a href="mailto:info@tryphotino.io" target="_blank">info@tryphotino.io</a>
-                    </p>
-                </div>
-            </section>
+            </footer>
         </div>
     </body>
 </html>
